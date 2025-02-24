@@ -1,23 +1,24 @@
 import React from "react";
-
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
-    <section className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
+    <section className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-4">
       {/* Left Side Content - col-7 */}
       <div className="md:w-7/12 text-left">
-        <p className="text-lg text-[#9B7D63] uppercase font-medium">
-          Welcome To Lancet Architect
+        <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
+         <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold mt-2">
+        <h2 className="text-2xl md:text-3xl font-bold mt-2">
           Best Interior & Architectural Company in India
         </h2>
-        <p className="text-gray-600 mt-4 leading-relaxed">
+        <p className="text-gray-700 mt-4 leading-relaxed text-justify">
           <strong>Lancet Architect</strong>, where creativity meets functionality in the world of
           architecture and interior design. We are a dedicated team of professionals committed
           to transforming spaces into vibrant, usable environments that reflect the unique
           personality and needs of each client.
         </p>
-        <p className="text-gray-600 mt-4 leading-relaxed">
+        <p className="text-gray-700 mt-2 leading-relaxed text-justify">
           At <strong>Lancet Architect</strong>, we believe that design is not just about aesthetics;
           it's about creating experiences. Our approach seamlessly blends modern design
           principles with cultural elements, resulting in spaces that are not only visually
@@ -25,7 +26,7 @@ const AboutSection = () => {
           office, or an innovative commercial space, our focus remains on enhancing the overall
           usability and ambiance.
         </p>
-        <p className="text-gray-600 mt-4 leading-relaxed">
+        <p className="text-gray-700 mt-2 leading-relaxed text-justify">
           Our commitment to excellence is reflected in every project we undertake. We blend the
           latest in design trends with sustainable practices, ensuring that each project is
           innovative, environmentally responsible, and crafted to the highest standards of
@@ -33,10 +34,9 @@ const AboutSection = () => {
         </p>
 
         {/* Button */}
-        <button className="mt-6 bg-[#9B7D63] text-white px-6 py-3 rounded-md flex items-center space-x-2 hover:bg-[#7A5F4D] transition duration-300">
-          <span>Learn More</span>
-          <span>→</span>
-        </button>
+        <Link className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
+          Learn More<MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-500  text-xl"/>
+        </Link>
       </div>
 
       {/* Right Side Image - col-5 */}
@@ -45,7 +45,7 @@ const AboutSection = () => {
           src="https://picsum.photos/500/500
 " 
           alt="Interior Design"
-          className="w-full rounded-lg shadow-lg"
+          className="w-full  shadow-lg"
         />
       </div>
     </section>

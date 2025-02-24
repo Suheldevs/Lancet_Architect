@@ -7,6 +7,8 @@ import DirectorMessage from '../components/DirectorMessage'
 import WhyChooseUs from '../components/WhyChooseUs'
 import ProjectSection from '../components/ProjectSection'
 import Footer from '../components/Footer'
+import Testimonial from '../components/Testimonials'
+import BlogSection from '../components/BlogSection'
 
 function Home() {
   return (
@@ -18,6 +20,8 @@ function Home() {
     <DirectorMessage/>
     <WhyChooseUs/>
     <ProjectSection/>
+    <Testimonial/>
+    <BlogSection/>
     <Footer/>
     </>
   )
