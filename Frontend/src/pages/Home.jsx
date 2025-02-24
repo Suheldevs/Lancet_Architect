@@ -13,7 +13,6 @@ import BlogSection from '../components/BlogSection'
 function Home() {
   return (
     <>
-    <Header/>
     <HeroSection/>
     <AboutSection/>
     <StatsSection/>
@@ -22,7 +21,7 @@ function Home() {
     <ProjectSection/>
     <Testimonial/>
     <BlogSection/>
-    <Footer/>
+  
     </>
   )
 }

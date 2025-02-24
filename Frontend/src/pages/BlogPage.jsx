@@ -39,20 +39,14 @@ const settings = {
   autoplaySpeed: 3000,
 };
 
-const BlogSection = () => {
+const BlogPage = () => {
   return (
-    <div className="container mx-auto px-4 lg:py-14 md:py-12 py-10">
-      <div className="px-4">
-        <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
-          <span className="h-[2px] w-7 bg-primary"></span> OUR LATEST Blog
-        </p>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 messiri">
-          Take a tour of our letest blogs
-        </h2>
-      </div>
+    <div className="container mx-auto px-4  pt-32 py-10">
+      
+      
 
-      <div className=" mx-auto py-8">
-        <Slider {...settings}>
+      <div className="grid grid-cols-3 mx-auto py-8">
+       
           {articles.map((article, index) => (
             <div key={index} className="px-2">
               <div className="relative group  overflow-hidden shadow-lg cursor-pointer">
@@ -76,10 +70,10 @@ const BlogSection = () => {
               </div>
             </div>
           ))}
-        </Slider>
+       
       </div>
     </div>
   );
 };
 
-export default BlogSection;
+export default BlogPage;

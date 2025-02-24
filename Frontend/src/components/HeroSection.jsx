@@ -22,14 +22,14 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-6">
       <Link
             to="/"
-            className="btn min-w-[200px] text-xl relative overflow-hidden rounded-full bg-black/10 backdrop-blur b-white/20 text-white px-6 py-3 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
+            className="btn min-w-[200px] text-lg relative overflow-hidden rounded-full bg-black/10 backdrop-blur b-white/20 text-white px-6 py-3 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
             data-hover="+91-8707438955"
           >
             <span>Contact Now</span>
           </Link>
       <Link
             to="/"
-            className="btn min-w-[200px] text-xl relative overflow-hidden rounded-full bg-black/10 backdrop-blur b-white/20 text-white px-6 py-3 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
+            className="btn min-w-[200px] text-lg relative overflow-hidden rounded-full bg-black/10 backdrop-blur b-white/20 text-white px-6 py-3 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
             data-hover="View Projects"
           >
             <span>View Projects</span>

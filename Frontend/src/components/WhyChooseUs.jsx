@@ -14,11 +14,11 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Right Content */}
-      <div className="py-4 px-10 bg-amber-700/5 flex justify-center items-cente flex-col">
+      <div className="py-4 px-10 bg-yellow-50 flex justify-center items-cente flex-col">
       <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
          <span className="h-[2px] w-7 bg-primary"></span> Why Choose Us
         </p>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 messiri">
           Take Control & Learn About Your Money.
         </h2>
 
@@ -27,10 +27,10 @@ const WhyChooseUs = () => {
           {/* Feature 1 */}
           <div className="flex items-start gap-4">
             <div className="bg-primary p-4 rounded-full text-white">
-              <FaTools size={24} />
+              <FaTools size={24} className="" />
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900">
+              <h3 className="text-2xl font-semibold text-gray-900 messiri">
                 Working with Modern Tools
               </h3>
               <p className="text-gray-700">
@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
               <FaHeadset size={24} />
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900">
+              <h3 className="text-2xl font-semibold text-gray-900 messiri">
                 24/7 Customer Support
               </h3>
               <p className="text-gray-700">
@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
               <FaUsers size={24} />
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900">
+              <h3 className="text-2xl font-semibold text-gray-900 messiri">
                 Professional Team Members
               </h3>
               <p className="text-gray-700">

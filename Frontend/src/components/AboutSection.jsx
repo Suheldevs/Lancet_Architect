@@ -1,15 +1,31 @@
 import React from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import pattern from '../assets/pattern/pattern2.png'
+import pencil from '../assets/pattern/pencil.png'
 const AboutSection = () => {
   return (
-    <section className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-4">
+    <section className="relative container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-4">
+<div className="absolute  top-10 right-0 rotate-45 p-4 bg-white rounded-full">
+<img src={pencil} alt='pencile ' className="h-16 "/>
+</div>
+
       {/* Left Side Content - col-7 */}
-      <div className="md:w-7/12 text-left">
+      <div className="relative z-10  md:w-7/12 text-left">
+      <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${pattern})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.1,
+              zIndex: -1,
+            }}
+          ></div>
         <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
          <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
-        <h2 className="text-2xl md:text-3xl font-bold mt-2">
+        <h2 className="text-2xl md:text-3xl font-bold mt-2 messiri">
           Best Interior & Architectural Company in India
         </h2>
         <p className="text-gray-700 mt-4 leading-relaxed text-justify">

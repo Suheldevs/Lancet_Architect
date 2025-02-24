@@ -45,44 +45,12 @@ const projects = [
   },
 ];
 
-const ProjectSection = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true, // Show navigation arrows
-    responsive: [
-      {
-        breakpoint: 1024, // Tablet view
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 640, // Mobile view
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+const ProjectPage = () => {
 
   return (
-    <section className="py-12 lg:py-14 container mx-auto">
-      <div className="">
-        <div className="px-4">
-        <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
-          <span className="h-[2px] w-7 bg-primary"></span> OUR LATEST PROJECTS
-        </p>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 messiri">
-          Take a tour of our work
-        </h2>
-</div>
-        <Slider {...settings} className="">
+    <section className=" py-52 container mx-auto">
+      <div className="grid grid-cols-3">
+        
           {projects.map((project, index) => (
             <div key={index} className="px-2">
               <Link
@@ -110,10 +78,9 @@ const ProjectSection = () => {
               </Link>
             </div>
           ))}
-        </Slider>
       </div>
     </section>
   );
 };
 
-export default ProjectSection;
+export default ProjectPage;

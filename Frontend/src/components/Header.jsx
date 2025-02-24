@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // ✅ Added state for the menu
+  const [isOpen, setIsOpen] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,11 +19,11 @@ const Header = () => {
   const menuItems = [
     { id: "home", label: "Home", width: "w-20" },
     { id: "about", label: "About Us", width: "w-32" },
-    { id: "portfolio", label: "Projects", width: "w-28" },
+    { id: "projects", label: "Projects", width: "w-28" },
     { id: "services", label: "Gallery", width: "w-24" },
     { id: "testimonial", label: "Testimonial", width: "w-36" },
     { id: "contacts", label: "Contact", width: "w-24" },
-    { id: "blog", label: "Blog", width: "w-20" },
+    { id: "blogs", label: "Blog", width: "w-20" },
   ];
 
   return (
@@ -38,26 +38,26 @@ const Header = () => {
 
       <div className={`flex items-center space-x-3 text-white gap-4`}>
         <div className={`${isOpen ? "hidden" : "block"}`}>
-          <Link
-            to="/"
-            className={`btn min-w-[200px] text-xl`}
+          <a
+            href="tel:8707438955"
+            className={`btn min-w-[170px] text-lg`}
             data-hover="+91-8707438955"
           >
             <span>Contact Now</span>
-          </Link>
+          </a>
         </div>
         <div className={`${isOpen ? "hidden" : "block"}`}>
-          <Link
-            to="/"
-            className={`btn min-w-[250px] text-xl`}
+          <a
+            href="mailto:contact@lancetarchitect.com"
+            className={`btn min-w-[300px] text-lg`}
             data-hover="contact@lancetarchitect.com"
           >
             <span>contact@lancetarchitect.com</span>
-          </Link>
+          </a>
         </div>
         {/* Hamburger Menu */}
         <div
-          className={`toggle ${isOpen ? "open" : ""}`}
+          className={`toggle z-50 ${isOpen ? "open" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="bars bar1"></div>
@@ -73,7 +73,7 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 mx-44 left-5  rounded-xl flex flex-co justify-center items-center text-white text-xl  z-40"
+            className="fixed inset-0 ml-44 mr-3 left-5  rounded-xl flex flex-co justify-center items-center text-white text-lg  -z-40"
           >
             {/* <button
               className="absolute top-6 right-6 text-4xl focus:outline-none"
@@ -84,15 +84,15 @@ const Header = () => {
             </button> */}
 
             {menuItems.map(({ id, label, width }) => (
-              <a
+              <Link
                 key={id}
-                href={`#${id}`}
+                to={`/${id}`}
                 className={`btn ${width} px-6`}
                 data-hover={label}
                 onClick={() => setIsOpen(false)}
               >
                 <span>{label}</span>
-              </a>
+              </Link>
             ))}
           </motion.nav>
         )}

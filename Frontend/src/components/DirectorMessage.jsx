@@ -8,8 +8,8 @@ const DirectorMessage = () => {
       <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
          <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          About Ms. Mohd Suhel
+        <h2 className="text-3xl font-bold text-gray-900 mb-4 messiri">
+          About Ms. Unknown
         </h2>
         <p className="text-gray-700 mb-2 leading-relaxed">
           As the Director of <strong>Lancet Architect</strong>, I am thrilled to

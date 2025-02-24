@@ -14,7 +14,6 @@ width: 100vw;
 
 
 
-
 .text-primary{
   color:#cca72d;
   /* color:#D4AF37; */
@@ -37,6 +36,9 @@ background: #cea623;
 background: #ba8512;
 }
 
+.messiri{
+  font-family: "El Messiri", serif;
+}
 
 
 
@@ -99,6 +101,10 @@ background: #ba8512;
     opacity: 1;
 }
 
+.btn:hover{
+  color:#cca72d;
+}
+
 /* Hamburger menu start */
 
 /* Hamburger Menu Styling */
@@ -112,7 +118,7 @@ background: #ba8512;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, scale 0.3s ease-in-out;
 }
 
 .bars {
@@ -120,7 +126,7 @@ background: #ba8512;
   height: 4px;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .bar1, .bar3 {
@@ -139,12 +145,22 @@ background: #ba8512;
 
 .toggle.open .bar3 {
   width: 100%;
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(10px, -10px);
 }
 
 .toggle.open {
   transform: rotate(180deg);
 }
+
+/* Hover Effect */
+.toggle:hover {
+  scale: 1.1;
+}
+
+.toggle:hover .bars {
+  background-color:#cca72d;
+}
+
 
 
 /* Hamburger menu end */
