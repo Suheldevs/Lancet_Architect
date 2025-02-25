@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import Breadcrum from "../components/Breadcrum";
 
 const articles = [
   {
@@ -41,34 +42,40 @@ const settings = {
 
 const BlogPage = () => {
   return (
-    <div className="container mx-auto px-4  pt-32 py-10">
+    <div className="">
       
-      
+      <Breadcrum
+        title="Recent Blog"
+        items={[
+          { label: "Home", link: "/" },
+          { label: "Blogs", link: "/blogs" },
+        ]}
+      />
 
-      <div className="grid grid-cols-3 mx-auto py-8">
+      <div className="container px-4 grid grid-cols-3 mx-auto py-10 lg:py-14 md:py-12">
        
           {articles.map((article, index) => (
-            <div key={index} className="px-2">
-              <div className="relative group  overflow-hidden shadow-lg cursor-pointer">
-                <img
-                  src={article.image}
-                  alt="Article"
-                  className="w-full h-96 object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
-                />
-
-                <div className="absolute top-0 translate-y-20 group-hover:translate-0  -rotate-90 group-hover:rotate-0 group-hover:left-0  -left-10 bg-primary text-white px-5 py-2 text-sm z-20 transition-all duration-500 ease-in-out">
-                  {article.date}
-                </div>
-
-                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-0 h-0 group-hover:opacity-100 group-hover:h-full transition-all duration-500 ease-in-out cursor-pointer  text-white">
-                  <h3 className="font-semibold text-xl px-4">{article.title}</h3>
-                  <p className="text-sm mt-1 px-4">{article.content}</p>
-                  <Link className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
-                           Learn More<MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-700  text-xl"/>
-                         </Link>
-                </div>
-              </div>
-            </div>
+             <div key={index} className="px-2">
+                          <div className="relative group  overflow-hidden shadow-lg cursor-pointer">
+                            <img
+                              src={article.image}
+                              alt="Article"
+                              className="w-full h-96 object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
+                            />
+            
+                            <div className="absolute text-xs top-0 translate-y-20 group-hover:translate-0  -rotate-90 group-hover:rotate-0 group-hover:left-0  -left-7 bg-primary text-white px-3 py-2 z-20 transition-all duration-500 ease-in-out">
+                              {article.date}
+                            </div>
+            
+                            <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-100 h-full transition-all duration-500 ease-in-out cursor-pointer  text-white">
+                              <h3 className="font-semibold text-xl px-4">{article.title}</h3>
+                              <p className="text-sm mt-1 px-4">{article.content}</p>
+                              <Link className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
+                                       Read More<MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-700  text-xl"/>
+                                     </Link>
+                            </div>
+                          </div>
+                        </div>
           ))}
        
       </div>

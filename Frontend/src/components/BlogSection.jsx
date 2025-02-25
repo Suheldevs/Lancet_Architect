@@ -62,15 +62,15 @@ const BlogSection = () => {
                   className="w-full h-96 object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
                 />
 
-                <div className="absolute top-0 translate-y-20 group-hover:translate-0  -rotate-90 group-hover:rotate-0 group-hover:left-0  -left-10 bg-primary text-white px-5 py-2 text-sm z-20 transition-all duration-500 ease-in-out">
+                <div className="absolute text-xs top-0 translate-y-20 group-hover:translate-0  -rotate-90 group-hover:rotate-0 group-hover:left-0  -left-7 bg-primary text-white px-3 py-2 z-20 transition-all duration-500 ease-in-out">
                   {article.date}
                 </div>
 
-                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-0 h-0 group-hover:opacity-100 group-hover:h-full transition-all duration-500 ease-in-out cursor-pointer  text-white">
+                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-100 h-full transition-all duration-500 ease-in-out cursor-pointer  text-white">
                   <h3 className="font-semibold text-xl px-4">{article.title}</h3>
                   <p className="text-sm mt-1 px-4">{article.content}</p>
                   <Link className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
-                           Learn More<MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-700  text-xl"/>
+                           Read More<MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-700  text-xl"/>
                          </Link>
                 </div>
               </div>

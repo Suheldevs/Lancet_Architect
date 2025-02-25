@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { FiPlus } from "react-icons/fi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const projects = [
   {
-    title: "Longwater Avenue",
+    title: "Longwater Avenue Longwater",
     slug: "longwater-avenue",
     description: "A modern architectural masterpiece with sustainable features.",
     mainImage: "https://picsum.photos/400/300?random=1",
@@ -84,31 +83,41 @@ const ProjectSection = () => {
 </div>
         <Slider {...settings} className="">
           {projects.map((project, index) => (
-            <div key={index} className="px-2">
-              <Link
-                to={`/projects/${project.slug}`}
-                className="relative group overflow-hidden block"
-              >
-                <img
-                  src={project.mainImage}
-                  alt={project.title}
-                  className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 "
-                />
-                <div
-                  className="absolute inset-0 bg-black/60 h-0 flex flex-col justify-between opacity-0 group-hover:opacity-100 group-hover:h-full p-6 duration-500 transition-all ease-in-out"
-                >
-                
-                  <div className="flex justify-center items-center flex-grow">
-                    <FiPlus className="text-white text-5xl" />
-                  </div>
-
-               
-                  <div className="text-white text-2xl font-bold text-center messiri ">
-                    {project.title}
-                  </div>
-                </div>
-              </Link>
-            </div>
+           <div
+                       key={index}
+                       className="px-2">
+                       <Link
+                         to={`/projects/${project.slug}`}
+                         className="relative group overflow-hidden block"
+                       >
+                         {/* Image with zoom effect */}
+                         <img
+                           src={project.mainImage}
+                           alt={project.title}
+                           className="w-full h-96 object-cover transition-transform duration-300 "
+                         />
+           
+                         {/* Sliding text with Read More Button */}
+                         <div
+                           className="absolute right-0 bottom-0 w-fit px-6 py-4 flex flex-col items-start 
+                           bg-white translate-x-full translate-z-full  group-hover:translate-x-0 group-hover-0
+                           opacity-0 group-hover:opacity-100 group-hover:z-10 perspective-distant
+                           duration-700 transition-all ease-in-out uppercase text-sm text-left shadow-lg"
+                         >
+                           {/* Project Title */}
+                           <div className="text-black font-medium text-left">{project.title}</div>
+           
+                           {/* Read More Button */}
+                           <Link
+                             to={`/projects/${project.slug}`}
+                             className="mt-2 text-xs text-primary flex items-center font-semibold gap-2"
+                           >
+                             View Details
+                             <MdKeyboardDoubleArrowRight className="text-lg text-gray-500 group-hover:text-[#cca72d] transition-all" />
+                           </Link>
+                         </div>
+                       </Link>
+                     </div>
           ))}
         </Slider>
       </div>

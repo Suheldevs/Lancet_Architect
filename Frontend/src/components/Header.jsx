@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(true); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +17,10 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { id: "home", label: "Home", width: "w-20" },
+    { id: "", label: "Home", width: "w-20" },
     { id: "about", label: "About Us", width: "w-32" },
     { id: "projects", label: "Projects", width: "w-28" },
-    { id: "services", label: "Gallery", width: "w-24" },
+    { id: "gallery", label: "Gallery", width: "w-24" },
     { id: "testimonial", label: "Testimonial", width: "w-36" },
     { id: "contacts", label: "Contact", width: "w-24" },
     { id: "blogs", label: "Blog", width: "w-20" },
@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-1/2 transform -translate-x-1/2 w-full flex items-center justify-between px-6 md:px-12 py-4 z-20 transition-all ease-in-out duration-1000 ${
+      className={`fixed left-1/2 transform -translate-x-1/2 w-full flex items-center justify-between px-6 md:px-12 py-4 z-50 transition-all ease-in-out duration-1000 ${
         scrolled
           ? "bg-black/90 backdrop-blur-lg shadow-lg"
           : "bg-black/10 backdrop-blur-sm top-5 max-w-[1200px] rounded-xl"
