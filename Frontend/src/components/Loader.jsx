@@ -13,9 +13,9 @@ const Loader = () => {
         <circle transform="rotate(-113,100,100)" strokeLinecap="round" strokeDashoffset="439.82" strokeDasharray="439.82 439.82" strokeWidth={2} stroke="currentColor" fill="none" r={70} className="pencil__stroke" />
         <g transform="translate(100,100)" className="pencil__rotate">
           <g fill="none">
-            <circle transform="rotate(-90)" strokeDashoffset={402} strokeDasharray="402.12 402.12" strokeWidth={30} stroke="hsl(223,90%,50%)" r={64} className="pencil__body1" />
-            <circle transform="rotate(-90)" strokeDashoffset={465} strokeDasharray="464.96 464.96" strokeWidth={10} stroke="hsl(223,90%,60%)" r={74} className="pencil__body2" />
-            <circle transform="rotate(-90)" strokeDashoffset={339} strokeDasharray="339.29 339.29" strokeWidth={10} stroke="hsl(223,90%,40%)" r={54} className="pencil__body3" />
+            <circle transform="rotate(-90)" strokeDashoffset={402} strokeDasharray="402.12 402.12" strokeWidth={30} stroke="goldenrod" r={64} className="pencil__body1" />
+            <circle transform="rotate(-90)" strokeDashoffset={465} strokeDasharray="464.96 464.96" strokeWidth={10} stroke="gold" r={74} className="pencil__body2" />
+            <circle transform="rotate(-90)" strokeDashoffset={339} strokeDasharray="339.29 339.29" strokeWidth={10} stroke="darkgoldenrod" r={54} className="pencil__body3" />
           </g>
           <g transform="rotate(-90) translate(49,0)" className="pencil__eraser">
             <g className="pencil__eraser-skew">
@@ -29,8 +29,8 @@ const Loader = () => {
             </g>
           </g>
           <g transform="rotate(-90) translate(49,-30)" className="pencil__point">
-            <polygon points="15 0,30 30,0 30" fill="hsl(33,90%,70%)" />
-            <polygon points="15 0,6 30,0 30" fill="hsl(33,90%,50%)" />
+            <polygon points="15 0,30 30,0 30" fill="goldenrod" />
+            <polygon points="15 0,6 30,0 30" fill="darkgoldenrod" />
             <polygon points="15 0,20 10,10 10" fill="hsl(223,10%,10%)" />
           </g>
         </g>
@@ -108,10 +108,8 @@ const StyledWrapper = styled.div`
       stroke-dashoffset: 351.86;
       transform: rotate(-90deg);
     }
-
     50% {
       stroke-dashoffset: 150.8;
-   /* 3/8 of diameter */
       transform: rotate(-225deg);
     }
   }
@@ -122,7 +120,6 @@ const StyledWrapper = styled.div`
       stroke-dashoffset: 406.84;
       transform: rotate(-90deg);
     }
-
     50% {
       stroke-dashoffset: 174.36;
       transform: rotate(-225deg);
@@ -135,7 +132,6 @@ const StyledWrapper = styled.div`
       stroke-dashoffset: 296.88;
       transform: rotate(-90deg);
     }
-
     50% {
       stroke-dashoffset: 127.23;
       transform: rotate(-225deg);
@@ -147,7 +143,6 @@ const StyledWrapper = styled.div`
   	to {
       transform: rotate(-45deg) translate(49px,0);
     }
-
     50% {
       transform: rotate(0deg) translate(49px,0);
     }
@@ -160,17 +155,14 @@ const StyledWrapper = styled.div`
   	to {
       transform: skewX(0);
     }
-
     35%,
   	65% {
       transform: skewX(-4deg);
     }
-
     37.5%, 
   	62.5% {
       transform: skewX(8deg);
     }
-
     40%,
   	45%,
   	50%,
@@ -178,7 +170,6 @@ const StyledWrapper = styled.div`
   	60% {
       transform: skewX(-15deg);
     }
-
     42.5%,
   	47.5%,
   	52.5%,
@@ -192,7 +183,6 @@ const StyledWrapper = styled.div`
   	to {
       transform: rotate(-90deg) translate(49px,-30px);
     }
-
     50% {
       transform: rotate(-225deg) translate(49px,-30px);
     }
@@ -202,7 +192,6 @@ const StyledWrapper = styled.div`
     from {
       transform: translate(100px,100px) rotate(0);
     }
-
     to {
       transform: translate(100px,100px) rotate(720deg);
     }
@@ -213,17 +202,16 @@ const StyledWrapper = styled.div`
       stroke-dashoffset: 439.82;
       transform: translate(100px,100px) rotate(-113deg);
     }
-
     50% {
       stroke-dashoffset: 164.93;
       transform: translate(100px,100px) rotate(-113deg);
     }
-
     75%,
   	to {
       stroke-dashoffset: 439.82;
       transform: translate(100px,100px) rotate(112deg);
     }
-  }`;
+  }
+`;
 
 export default Loader;

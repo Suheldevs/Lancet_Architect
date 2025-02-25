@@ -22,7 +22,7 @@ const Header = () => {
     { id: "projects", label: "Projects", width: "w-28" },
     { id: "gallery", label: "Gallery", width: "w-24" },
     { id: "testimonial", label: "Testimonial", width: "w-36" },
-    { id: "contacts", label: "Contact", width: "w-24" },
+    { id: "contact", label: "Contact", width: "w-24" },
     { id: "blogs", label: "Blog", width: "w-20" },
   ];
 
@@ -31,7 +31,7 @@ const Header = () => {
       className={`fixed left-1/2 transform -translate-x-1/2 w-full flex items-center justify-between px-6 md:px-12 py-4 z-50 transition-all ease-in-out duration-1000 ${
         scrolled
           ? "bg-black/90 backdrop-blur-lg shadow-lg"
-          : "bg-black/10 backdrop-blur-sm top-5 max-w-[1200px] rounded-xl"
+          : "bg-black/10 hover:bg-black/50 backdrop-blur-sm top-5 max-w-[1200px] rounded-xl"
       }`}
     >
       <h1 className="text-white text-2xl font-bold">Lancet Logo</h1>

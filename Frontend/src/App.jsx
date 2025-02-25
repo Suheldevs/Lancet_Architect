@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
 import Gallery from './pages/GalleryPage';
+import TestimonialPage from './pages/TestimonialPage';
+import ContactUs from './pages/ContactUs';
 
 // Lazy loading pages
 const Home = lazy(() => import('./pages/Home'));
@@ -22,6 +24,8 @@ function App() {
           <Route path='/projects' element={<ProjectPage />} />
           <Route path='/blogs' element={<BlogPage />} />
           <Route path='/gallery' element={<Gallery/>} />
+          <Route path='/testimonial' element={<TestimonialPage/>} />
+          <Route path='/contact' element={<ContactUs/>} />
         </Routes>
       </Suspense>
       <Footer />
