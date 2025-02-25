@@ -9,6 +9,7 @@ import ProjectSection from '../components/ProjectSection'
 import Footer from '../components/Footer'
 import Testimonial from '../components/Testimonials'
 import BlogSection from '../components/BlogSection'
+import HowWeWork from '../components/HowWeWork'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
     <StatsSection/>
     <DirectorMessage/>
     <WhyChooseUs/>
+    <HowWeWork/>
     <ProjectSection/>
     <Testimonial/>
     <BlogSection/>

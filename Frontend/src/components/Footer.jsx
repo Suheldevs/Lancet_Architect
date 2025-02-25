@@ -11,10 +11,20 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import cclogo from "../assets/Home/ccogo-suhel.webp";
-
+import pattern from '../assets/pattern/banner2.jpg'
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
+    <footer className="relative bg-black/95 text-white">
+      <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: `url(${pattern})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    opacity: 0.6,
+                    zIndex: -1,
+                  }}
+                ></div>
       <div className="container mx-auto py-10 px-20 lg:py-12 md:py-12 grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 ">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
@@ -122,7 +132,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className=" mt-4 border-t border-gray-600 py-2 text-center flex lg:flex-row flex-col justify-center items-center">
+      <div className=" mt-4 border-t border-gray-900 py-2 text-center flex lg:flex-row flex-col justify-center items-center">
         <p className=" text-sm px-2">
           Copyright 2025 Lancet Architect || All Rights Reserved || Designed By
         </p>

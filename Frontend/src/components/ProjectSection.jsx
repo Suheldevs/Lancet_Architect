@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import pattern from '../assets/pattern/element1.jpg'
 
 const projects = [
   {
@@ -71,7 +72,17 @@ const ProjectSection = () => {
   };
 
   return (
-    <section className="py-12 lg:py-14 container mx-auto">
+    <section className="py-12 relative lg:py-14 container mx-auto">
+      <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${pattern})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.3,
+              zIndex: -1,
+            }}
+          ></div>
       <div className="">
         <div className="px-4">
         <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">

@@ -10,6 +10,7 @@ font-family: "Poppins", serif;
 box-sizing: border-box;
 overflow-x: hidden;
 width: 100vw;
+background: url('./assets/pattern/archi-pattern.png') no-repeat center center/cover;
 }
 
 
