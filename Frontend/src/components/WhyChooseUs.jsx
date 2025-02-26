@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Right Content */}
-      <div className="py-6 px-10 bg-gray-50 flex flex-col justify-center">
+      <div className="py-6 px-10 bg-gray-50 flex flex-col justify-center ">
         <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
           <span className="h-[2px] w-7 bg-primary"></span> Why Choose Us
         </p>
@@ -93,7 +93,7 @@ const WhyChooseUs = () => {
                 }}
               ></div>
               <div className="text-white flex justify-center mb-4">
-               <span className="bg-primary p-2 rounded-full"> {feature.icon} </span>
+               <span className="bg-primary p-2 shadow-2xl rounded-full"> {feature.icon} </span>
               </div>
               <h3 className="text-xl font-semibold text-center messiri">
                 {feature.title}

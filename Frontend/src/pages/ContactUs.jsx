@@ -49,7 +49,7 @@ const ContactUs = () => {
               </a>
             </div>
             <div className="text-start ">
-              <FaEnvelope className="inline-block text-black/90  text-xl mr-2" />
+              <FaEnvelope className="inline-block text-black/90  text-xl mt-2 mr-2" />
               {/* <div className="ms-2"> */}
               <a href="mailto:contact@lancetarchitect.com">
                 <span className="group-hover:text-gray-400">

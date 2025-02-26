@@ -1,6 +1,6 @@
 import { Lightbulb, Box, Ruler, Building } from "lucide-react";
 import { useMemo } from "react";
-
+import bg from '../assets/pattern/banner2.jpg'
 const steps = [
   { id: 1, title: "Concept Ready", icon: Box },
   { id: 2, title: "Idea Works!", icon: Lightbulb },
@@ -12,15 +12,15 @@ const Step = ({ id, title, Icon, index }) => (
   <div className="text-center relative flex flex-col items-center" data-aos="fade-up" data-aos-delay={index * 300}>
     {/* Icon Container */}
     <div className="w-24 h-24 group flex items-center border justify-center rounded-full transition-all duration-1000 border-primary text-primary bg-white hover:bg-transparent hover:text-black relative">
-      <Icon size={70} aria-hidden="true" />
+      <Icon size={60} aria-hidden="true" />
       {/* Number Badge */}
       <div className="absolute top-0 -right-2 group-hover:bg-black px-3 py-1 text-primary group-hover:text-black font-bold rounded-full border border-primary transition-all duration-300 group-hover:-top-2 group-hover:right-0 group-hover:border-white bg-white">
         {id}
       </div>
     </div>
     {/* Title & Description */}
-    <h3 className="font-semibold mt-3 text-white">{title}</h3>
-    <p className="text-gray-400 text-sm mt-1 max-w-xs mx-auto px-2">
+    <h3 className="font-semibold mt-3 text-lg text-white">{title}</h3>
+    <p className="text-gray-300 text-sm mt-1 max-w-xs mx-auto px-2">
       There are many variations of that passages of Lorem available more.
     </p>
 
@@ -49,8 +49,20 @@ const Step = ({ id, title, Icon, index }) => (
 export default function HowWeWork() {
   const memoizedSteps = useMemo(() => steps, []);
 
+
+  
   return (
-    <div className="text-center py-10 px-5 bg-black text-white" data-aos="fade-up">
+    <div className="text-center py-10 px-5 bg-black z-10 text-white" data-aos="fade-up">
+      <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: `url(${bg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    opacity: 0.2,
+                    zIndex: -1,
+                  }}
+                ></div>
       <div className="px-4 container mx-auto">
         <p className="text-lg text-primary uppercase font-medium flex items-center justify-center gap-2">
           <span className="h-[2px] w-7 bg-primary"></span> How We Work{" "}

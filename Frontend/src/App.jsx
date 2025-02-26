@@ -26,8 +26,8 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-      <Header />
       <Suspense fallback={<div className='flex justify-center items-center min-h-screen w-screen'><Loader/></div>}>
+      <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<AboutUs />} />
@@ -40,8 +40,8 @@ function App() {
           <Route path="/projects/:slug" element={<ProjectDetailPage />} />
           <Route path='*' element={<Home/>} />
         </Routes>
-      </Suspense>
       <Footer />
+      </Suspense>
     </BrowserRouter>
   );
 }

@@ -73,7 +73,7 @@ const ProjectSection = () => {
 
   return (
     <section
-      className="py-12 relative lg:pb-14 pt-6 container mx-auto"
+      className="py-12 relative lg:pb-14 pt-6 container mx-auto px-4"
       data-aos="fade-up"
     >
       <div
@@ -87,7 +87,7 @@ const ProjectSection = () => {
         }}
       ></div>
       <div className="">
-        <div className="px-4">
+        <div className="">
           <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
             <span className="h-[2px] w-7 bg-primary"></span> OUR LATEST PROJECTS
           </p>
