@@ -19,25 +19,26 @@ background: url('./assets/pattern/archi-pattern.png') no-repeat center center/co
 
 
 .text-primary{
-  color:#cca72d;
+  color:#fe0000;
+  /* color:#fe0000; */
   /* color:#D4AF37; */
 }
 
 .bg-primary{
-  background:#cca72d;
+  background:#fe0000;
 }
 
 .border-primary{
-  border-color:#cca72d;
+  border-color:#fe0000;
 }
 
 
 .bg-primary-btn{
-background: #cea623;
+background: #fe0000;
 }
 
 .bg-primary-btn:hover{
-background: #ba8512;
+background: #ce0202;
 }
 
 .messiri{
@@ -106,7 +107,7 @@ background: #ba8512;
 }
 
 .btn:hover{
-  color:#cca72d;
+  color:#fe0000;
 }
 
 /* Hamburger menu start */
@@ -162,7 +163,7 @@ background: #ba8512;
 }
 
 .toggle:hover .bars {
-  background-color:#cca72d;
+  background-color:#fe0000;
 }
 
 

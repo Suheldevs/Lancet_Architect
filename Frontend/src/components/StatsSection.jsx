@@ -15,12 +15,16 @@ const stats = [
 const StatsComponent = () => {
   return (
     <div
-      className="relative bg-cover bg-center text-white py-16 h-[300px] mb-36"
+      className="relative bg-cover bg-center text-white py-12 h-[300px] mb-36"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold">
-          Together we can envision, inspire and transform your business
+      <div className=" container mx-auto">
+        <p className="text-lg text-primary uppercase font-bold flex items-center justify-center gap-2">
+          <span className="h-[2px] w-7 bg-primary"></span> Our Stats{" "}
+          <span className="h-[2px] w-7 bg-primary"></span>
+        </p>
+        <h2 className="text-3xl font-bold text-white text-center mb-6 messiri">
+        Together we can envision, inspire and transform your business
         </h2>
       </div>
       <div className="absolute bottom-0 translate-y-1/2 w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 px-6 md:px-12">

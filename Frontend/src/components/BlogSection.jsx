@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogData } from "../redux/slices/dataslice";
 
 const articles = [
   {
@@ -40,6 +42,16 @@ const settings = {
 };
 
 const BlogSection = () => {
+  const [blog, setBlog] = useState(articles);
+  const dispatch = useDispatch();
+  const { blogData, status, error } = useSelector((state) => state.data);
+
+  useEffect(() => {
+    dispatch(fetchBlogData());
+    // setBlog(blogData)
+    console.log(blog, blogData, status, error);
+  }, [dispatch]);
+
   return (
     <div className="container mx-auto px-4 lg:py-14 md:py-12 py-10">
       <div className="px-4">
@@ -52,8 +64,16 @@ const BlogSection = () => {
       </div>
 
       <div className=" mx-auto py-8">
+        <p>
+          {blog.length === 0 && error
+            ? error
+            : status === "loading"
+            ? "Loading..."
+            : null}
+        </p>
+
         <Slider {...settings}>
-          {articles.map((article, index) => (
+          {blog.map((article, index) => (
             <div key={index} className="px-2">
               <div className="relative group  overflow-hidden shadow-lg cursor-pointer">
                 <img
@@ -67,11 +87,14 @@ const BlogSection = () => {
                 </div>
 
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-100 h-full transition-all duration-500 ease-in-out cursor-pointer  text-white">
-                  <h3 className="font-semibold text-xl px-4">{article.title}</h3>
+                  <h3 className="font-semibold text-xl px-4">
+                    {article.title}
+                  </h3>
                   <p className="text-sm mt-1 px-4">{article.content}</p>
                   <Link className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
-                           Read More<MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-700  text-xl"/>
-                         </Link>
+                    Read More
+                    <MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-700  text-xl" />
+                  </Link>
                 </div>
               </div>
             </div>

@@ -6,46 +6,47 @@ import "slick-carousel/slick/slick-theme.css";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import pattern from '../assets/pattern/element1.jpg'
 
-const projects = [
-  {
-    title: "Longwater Avenue Longwater",
-    slug: "longwater-avenue",
-    description: "A modern architectural masterpiece with sustainable features.",
-    mainImage: "https://picsum.photos/400/300?random=1",
-  },
-  {
-    title: "Skyline Heights",
-    slug: "skyline-heights",
-    description: "Luxury apartments with a breathtaking city view.",
-    mainImage: "https://picsum.photos/400/300?random=4",
-  },
-  {
-    title: "Sunset Villa",
-    slug: "sunset-villa",
-    description: "A peaceful villa with stunning sunset views.",
-    mainImage: "https://picsum.photos/400/300?random=7",
-  },
-  {
-    title: "Ocean Breeze",
-    slug: "ocean-breeze",
-    description: "A coastal retreat with breathtaking ocean views.",
-    mainImage: "https://picsum.photos/400/300?random=10",
-  },
-  {
-    title: "Mountain Escape",
-    slug: "mountain-escape",
-    description: "A serene getaway in the heart of the mountains.",
-    mainImage: "https://picsum.photos/400/300?random=13",
-  },
-  {
-    title: "Urban Oasis",
-    slug: "urban-oasis",
-    description: "A modern living space in the bustling city center.",
-    mainImage: "https://picsum.photos/400/300?random=16",
-  },
-];
+
 
 const ProjectSection = () => {
+  const projects = [
+    {
+      title: "Longwater Avenue Longwater",
+      slug: "longwater-avenue",
+      description: "A modern architectural masterpiece with sustainable features.",
+      mainImage: "https://picsum.photos/400/300?random=1",
+    },
+    {
+      title: "Skyline Heights",
+      slug: "skyline-heights",
+      description: "Luxury apartments with a breathtaking city view.",
+      mainImage: "https://picsum.photos/400/300?random=4",
+    },
+    {
+      title: "Sunset Villa",
+      slug: "sunset-villa",
+      description: "A peaceful villa with stunning sunset views.",
+      mainImage: "https://picsum.photos/400/300?random=7",
+    },
+    {
+      title: "Ocean Breeze",
+      slug: "ocean-breeze",
+      description: "A coastal retreat with breathtaking ocean views.",
+      mainImage: "https://picsum.photos/400/300?random=10",
+    },
+    {
+      title: "Mountain Escape",
+      slug: "mountain-escape",
+      description: "A serene getaway in the heart of the mountains.",
+      mainImage: "https://picsum.photos/400/300?random=13",
+    },
+    {
+      title: "Urban Oasis",
+      slug: "urban-oasis",
+      description: "A modern living space in the bustling city center.",
+      mainImage: "https://picsum.photos/400/300?random=16",
+    },
+  ];
   const settings = {
     dots: true,
     infinite: true,
@@ -97,8 +98,8 @@ const ProjectSection = () => {
            <div
                        key={index}
                        className="px-2">
-                       <Link
-                         to={`/projects/${project.slug}`}
+                       <div
+                    
                          className="relative group overflow-hidden block"
                        >
                          {/* Image with zoom effect */}
@@ -124,10 +125,10 @@ const ProjectSection = () => {
                              className="mt-2 text-xs text-primary flex items-center font-semibold gap-2"
                            >
                              View Details
-                             <MdKeyboardDoubleArrowRight className="text-lg text-gray-500 group-hover:text-[#cca72d] transition-all" />
+                             <MdKeyboardDoubleArrowRight className="text-lg text-primary transition-all group-hover:translate-x-2 delay-300 duration-1000" />
                            </Link>
                          </div>
-                       </Link>
+                       </div>
                      </div>
           ))}
         </Slider>

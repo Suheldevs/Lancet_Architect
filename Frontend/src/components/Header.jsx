@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTimes } from "react-icons/fa";
+import logo from '../assets/logo.png'
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +34,9 @@ const Header = () => {
           : "bg-black/10 hover:bg-black/50 backdrop-blur-sm top-5 max-w-[1200px] rounded-xl"
       }`}
     >
-      <h1 className="text-white text-2xl font-bold">Lancet Logo</h1>
+      <div className="w-44">
+        <img src={logo}/>
+      </div>
 
       <div className={`flex items-center space-x-3 text-white gap-4`}>
         <div className={`${isOpen ? "hidden" : "block"}`}>
