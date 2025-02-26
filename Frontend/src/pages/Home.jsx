@@ -6,7 +6,6 @@ import StatsSection from '../components/StatsSection'
 import DirectorMessage from '../components/DirectorMessage'
 import WhyChooseUs from '../components/WhyChooseUs'
 import ProjectSection from '../components/ProjectSection'
-import Footer from '../components/Footer'
 import Testimonial from '../components/Testimonials'
 import BlogSection from '../components/BlogSection'
 import HowWeWork from '../components/HowWeWork'
@@ -18,8 +17,8 @@ function Home() {
     <AboutSection/>
     <StatsSection/>
     <DirectorMessage/>
-    <WhyChooseUs/>
     <HowWeWork/>
+    <WhyChooseUs/>
     <ProjectSection/>
     <Testimonial/>
     <BlogSection/>

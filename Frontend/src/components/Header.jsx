@@ -89,7 +89,7 @@ const Header = () => {
                 to={`/${id}`}
                 className={`btn ${width} px-6`}
                 data-hover={label}
-                onClick={() => setIsOpen(false)}
+                // onClick={() => setIsOpen(false)}
               >
                 <span>{label}</span>
               </Link>
