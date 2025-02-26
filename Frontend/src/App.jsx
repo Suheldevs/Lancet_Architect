@@ -14,6 +14,7 @@ const ProjectPage = lazy(() => import('./pages/ProjectPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import ProjectDetailPage from './pages/ProjectDetail';
 function App() {
   useEffect(() => {
     AOS.init({
@@ -34,6 +35,8 @@ function App() {
           <Route path='/gallery' element={<Gallery/>} />
           <Route path='/testimonial' element={<TestimonialPage/>} />
           <Route path='/contact' element={<ContactUs/>} />
+          <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+          <Route path='*' element={<Home/>} />
         </Routes>
       </Suspense>
       <Footer />

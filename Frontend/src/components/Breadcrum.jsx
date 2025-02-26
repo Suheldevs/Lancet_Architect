@@ -14,22 +14,22 @@ function Breadcrum({ title, items }) {
 
       {/* Centered Content */}
       <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
-        <h1 className="text-7xl font-bold leading-10">{title}</h1>
+        <h1 className="text-7xl font-bold ">{title}</h1>
 
         {/* Breadcrumb Navigation */}
         {items && (
-          <ul className="mt-4 flex justify-center items-center text-lg group">
+          <ul className="mt-2 flex justify-center items-center text-lg group">
             {items.map((item, index) => (
-              <li key={index} className="opacity-90 flex items-center ">
+              <li key={index} className="opacity-95 flex items-center ">
                 <Link
                   to={item.link}
-                  className="hover:text-amber-400 transition hover:translate-x-2"
+                  className="hover:text-gray-300 transition hover:translate-x-2"
                 >
                   {item.label}
                 </Link>
                 {/* Only show arrow if it's not the last item */}
                 {index < items.length - 1 && (
-                  <MdKeyboardDoubleArrowRight className="mx-2 text-xl text-gray-200 group-hover:text-[#cca72d] group-hover:translate-x-2 transition-all" />
+                  <MdKeyboardDoubleArrowRight className="mx-2 text-xl text-gray-100 group-hover:text-gray-300 group-hover:translate-x-2 transition-all" />
                 )}
               </li>
             ))}

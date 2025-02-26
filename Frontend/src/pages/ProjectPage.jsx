@@ -7,41 +7,78 @@ const projects = [
   {
     title: "Longwater Avenue",
     slug: "longwater-avenue",
-    description:
-      "A modern architectural masterpiece with sustainable features.",
-    mainImage: "https://picsum.photos/400/300?random=1",
+    description: "A modern architectural masterpiece with sustainable features.",
+    mainImageUrl: "https://picsum.photos/400/300?random=1",
+    otherImagesUrl: [
+      "https://picsum.photos/400/300?random=101",
+      "https://picsum.photos/400/300?random=102",
+      "https://picsum.photos/400/300?random=103",
+      "https://picsum.photos/400/300?random=104",
+    ],
   },
   {
     title: "Skyline Heights",
     slug: "skyline-heights",
     description: "Luxury apartments with a breathtaking city view.",
-    mainImage: "https://picsum.photos/400/300?random=4",
+    mainImageUrl: "https://picsum.photos/400/300?random=4",
+    otherImagesUrl: [
+      "https://picsum.photos/400/300?random=105",
+      "https://picsum.photos/400/300?random=106",
+      "https://picsum.photos/400/300?random=107",
+      "https://picsum.photos/400/300?random=108",
+    ],
   },
   {
     title: "Sunset Villa",
     slug: "sunset-villa",
     description: "A peaceful villa with stunning sunset views.",
-    mainImage: "https://picsum.photos/400/300?random=7",
+    mainImageUrl: "https://picsum.photos/400/300?random=7",
+    otherImagesUrl: [
+      "https://picsum.photos/400/300?random=109",
+      "https://picsum.photos/400/300?random=110",
+      "https://picsum.photos/400/300?random=111",
+      "https://picsum.photos/400/300?random=112",
+    ],
   },
   {
     title: "Ocean Breeze",
     slug: "ocean-breeze",
     description: "A coastal retreat with breathtaking ocean views.",
-    mainImage: "https://picsum.photos/400/300?random=10",
+    mainImageUrl: "https://picsum.photos/400/300?random=10",
+    otherImagesUrl: [
+      "https://picsum.photos/400/300?random=113",
+      "https://picsum.photos/400/300?random=114",
+      "https://picsum.photos/400/300?random=115",
+      "https://picsum.photos/400/300?random=116",
+    ],
   },
   {
     title: "Mountain Escape",
     slug: "mountain-escape",
     description: "A serene getaway in the heart of the mountains.",
-    mainImage: "https://picsum.photos/400/300?random=13",
+    mainImageUrl: "https://picsum.photos/400/300?random=13",
+    otherImagesUrl: [
+      "https://picsum.photos/400/300?random=117",
+      "https://picsum.photos/400/300?random=118",
+      "https://picsum.photos/400/300?random=119",
+      "https://picsum.photos/400/300?random=120",
+    ],
   },
   {
     title: "Urban Oasis",
     slug: "urban-oasis",
     description: "A modern living space in the bustling city center.",
-    mainImage: "https://picsum.photos/400/300?random=16",
+    mainImageUrl: "https://picsum.photos/400/300?random=16",
+    otherImagesUrl: [
+      "https://picsum.photos/400/300?random=121",
+      "https://picsum.photos/400/300?random=122",
+      "https://picsum.photos/400/300?random=123",
+      "https://picsum.photos/400/300?random=124",
+    ],
   },
 ];
+
+
 
 const ProjectPage = () => {
   return (
@@ -64,7 +101,7 @@ const ProjectPage = () => {
               className="relative group overflow-hidden block"
             >
               <img
-                src={project.mainImage}
+                src={project.mainImageUrl}
                 alt={project.title}
                 className="w-full h-96 object-cover transition-transform duration-300 "
               />
