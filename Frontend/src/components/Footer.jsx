@@ -29,8 +29,9 @@ const Footer = () => {
       <div className="container mx-auto py-10 px-20 lg:py-12 md:py-12 grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 ">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
+          <a href="/">
           <img src={logo} alt="Space Culture" className="h-16 mb-2" />
-         
+         </a>
           <p className="text-sm mb-2 tracking-wider"> Architects, Interior, Landscape</p>
           <div className="flex space-x-3 mt-4">
             {[

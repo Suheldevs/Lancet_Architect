@@ -6,7 +6,7 @@ import pencil from '../assets/pattern/pencil.png'
 const AboutSection = () => {
   return (
     <section className="relative container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-4" >
-<div className="absolute  top-10 right-0 rotate-45 p-4 bg-white rounded-full">
+<div className="absolute z-20  top-10 right-0 rotate-45 p-4 bg-white rounded-full">
 <img src={pencil} alt='pencile ' className="h-16 animate-bounce "/>
 </div>
 

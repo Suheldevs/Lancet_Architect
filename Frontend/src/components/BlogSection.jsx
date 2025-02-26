@@ -7,26 +7,26 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBlogData } from "../redux/slices/dataslice";
 
-const articles = [
+const blogs = [
   {
+    slug: "five-quick-tips-architecture",
     date: "02-02-2025",
     title: "Five Quick Tips Regarding Architecture",
-    content:
-      "Architecture is an art form that marries creativity with functionality, shaping the spaces where we live, work, and play.",
+    description: `<p>Architecture is an <strong>art form</strong> that marries creativity with functionality, shaping the spaces where we <em>live</em>, <em>work</em>, and <em>play</em>.</p>`,
     image: "https://picsum.photos/400/250?random=1",
   },
   {
+    slug: "residential-space-luxury-interiors",
     date: "01-11-2024",
     title: "Residential Space with Luxurious Interiors",
-    content:
-      "Transform your home into a masterpiece of luxury and comfort with our expertly designed residential spaces.",
+    description: `<p>Transform your home into a <strong>masterpiece</strong> of <span class="text-blue-500">luxury</span> and comfort with our expertly designed residential spaces.</p>`,
     image: "https://picsum.photos/400/250?random=2",
   },
   {
+    slug: "structural-design-luxury-interiors",
     date: "01-10-2025",
     title: "Structural Design with Luxurious Interiors",
-    content:
-      "In the realm of modern architecture, the fusion of structural design with luxurious interiors has become a hallmark of sophistication, comfort, and innovation.",
+    description: `<p>In the realm of modern architecture, the fusion of <em>structural design</em> with <strong>luxurious interiors</strong> has become a hallmark of sophistication.</p>`,
     image: "https://picsum.photos/400/250?random=3",
   },
 ];
@@ -42,7 +42,7 @@ const settings = {
 };
 
 const BlogSection = () => {
-  const [blog, setBlog] = useState(articles);
+  const [blog, setBlog] = useState(blogs);
   const dispatch = useDispatch();
   const { blogData, status, error } = useSelector((state) => state.data);
 
@@ -75,29 +75,41 @@ const BlogSection = () => {
         <Slider {...settings}>
           {blog.map((article, index) => (
             <div key={index} className="px-2">
-              <div className="relative group  overflow-hidden shadow-lg cursor-pointer">
-                <img
-                  src={article.image}
-                  alt="Article"
-                  className="w-full h-96 object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
-                />
-
-                <div className="absolute text-xs top-0 translate-y-20 group-hover:translate-0  -rotate-90 group-hover:rotate-0 group-hover:left-0  -left-7 bg-primary text-white px-3 py-2 z-20 transition-all duration-500 ease-in-out">
-                  {article.date}
-                </div>
-
-                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-100 h-full transition-all duration-500 ease-in-out cursor-pointer  text-white">
-                  <h3 className="font-semibold text-xl px-4">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm mt-1 px-4">{article.content}</p>
-                  <Link className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
-                    Read More
-                    <MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-700  text-xl" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+                        <div className="relative group overflow-hidden shadow-lg cursor-pointer ">
+                          {/* Blog Image */}
+                          <img
+                            src={article.image}
+                            alt={article.title}
+                            className="w-full h-96 object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
+                          />
+            
+                          {/* Blog Date Tag */}
+                          <div className="absolute text-xs top-0 translate-y-20 group-hover:translate-0 -rotate-90 group-hover:rotate-0 group-hover:left-0 -left-7 bg-primary text-white px-3 py-2 z-20 transition-all duration-500 ease-in-out">
+                            {article.date}
+                          </div>
+            
+                          {/* Blog Overlay Content */}
+                          <div className="absolute inset-0 bg-black/50 flex flex-col justify-end opacity-100 h-full transition-all duration-500 ease-in-out cursor-pointer text-white p-4">
+                            <h3 className="font-semibold text-xl">{article.title}</h3>
+                            
+                            {/* Render HTML Description */}
+                            <div
+                              className="text-sm mt-1"
+                              dangerouslySetInnerHTML={{ __html: article.description }}
+                            />
+            
+                            {/* Read More Button */}
+                            <Link
+                              to={`/blogs/${article.slug}`}
+                              state={{ article }}
+                              className="mt-6 inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600"
+                            >
+                              Read More
+                              <MdKeyboardDoubleArrowRight className="inline group-hover:pl-4 w-9 transition-all duration-700 text-xl" />
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
           ))}
         </Slider>
       </div>

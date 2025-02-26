@@ -28,7 +28,7 @@ const ContactUs = () => {
           <h2 className="text-4xl font-bold  messiri italic tracking-widest">
             <span className="block -ml-24">Let's</span> Talk !
           </h2>
-          <p className="text-gray-700 text-base mb-8 ">
+          <p className="text-gray-700 text-base mb-6 ">
             Tell us about your dream project, we will make it come true
           </p>
           <div className="flex space-y-1 flex-col text-start">
@@ -36,7 +36,7 @@ const ContactUs = () => {
               Contact Details
             </h3>
             <div className="text-start">
-              <FaPhoneAlt className="inline-block text-white p-2 text-4xl bg-gray-800 rounded-full transition transform hover:scale-110 hover:-rotate-12 hover:bg-yellow-600 mr-2" />
+              <FaPhoneAlt className="inline-block text-black/90  text-xl mr-2" />
               <a href="tel:8707438955">
                 <span className="group-hover:text-gray-400">
                   +91-8707438955,{" "}
@@ -49,19 +49,19 @@ const ContactUs = () => {
               </a>
             </div>
             <div className="text-start ">
-              <FaEnvelope className=" inline-block text-white p-2 text-4xl bg-gray-800 rounded-full transition transform hover:scale-110 hover:-rotate-12 hover:bg-yellow-600 mr-2" />
+              <FaEnvelope className="inline-block text-black/90  text-xl mr-2" />
               {/* <div className="ms-2"> */}
               <a href="mailto:contact@lancetarchitect.com">
                 <span className="group-hover:text-gray-400">
                   contact@lancetarchitect.com,
                 </span>
               </a>
-              {/* <br />
+               <br />
               <a href="mailto:info@lancetarchitect.com">
-                <span className="group-hover:text-gray-400 ml-10">
+                <span className="group-hover:text-gray-400 ml-7 ">
                   info@lancetarchitect.com
                 </span>
-              </a> */}
+              </a> 
               {/* </div> */}
             </div>
           </div>
@@ -76,7 +76,7 @@ const ContactUs = () => {
               <Link
                 key={index}
                 to={link}
-                className="p-2 text-xl bg-gray-800 rounded-full transition transform hover:scale-110 hover:-rotate-12 hover:bg-yellow-600"
+                className="p-2 text-xl bg-black/90 rounded-full transition transform hover:scale-110 hover:-rotate-12 hover:bg-red-600"
               >
                 <Icon className="text-white" />
               </Link>
@@ -123,7 +123,7 @@ const ContactUs = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full mt-4 p-3 bg-black text-white font-semibold  hover:bg-yellow-600 cursor-pointer"
+              className="w-full mt-4 p-3 bg-black text-white font-semibold  hover:bg-red-600 cursor-pointer"
             >
               SEND MAIL
             </button>

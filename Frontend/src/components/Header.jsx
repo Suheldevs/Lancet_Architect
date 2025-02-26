@@ -32,12 +32,12 @@ const Header = () => {
       className={`fixed left-1/2 transform -translate-x-1/2 w-full flex items-center justify-between px-6 md:px-12 py-4 z-50 transition-all ease-in-out duration-1000 ${
         scrolled
           ? "bg-black/90 backdrop-blur-lg shadow-lg"
-          : "bg-black/10 hover:bg-black/50 backdrop-blur-sm top-5 max-w-[1200px] rounded-xl"
+          : "bg-black/10 hover:bg-black/50 backdrop-blur-sm top-5 lg:max-w-[1200px] 2xl:max-w-[1400px] rounded-xl"
       }`}
     >
-      <div className="w-44">
+      <a href="/" className="w-44">
         <img src={logo}/>
-      </div>
+      </a>
 
       <div className={`flex items-center space-x-3 text-white gap-4`}>
         <div className={`${isOpen ? "hidden" : "block"}`}>

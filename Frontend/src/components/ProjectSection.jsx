@@ -72,7 +72,10 @@ const ProjectSection = () => {
   };
 
   return (
-    <section className="py-12 relative lg:pb-14 pt-6 container mx-auto" data-aos="fade-up">
+    <section
+      className="py-12 relative lg:pb-14 pt-6 container mx-auto"
+      data-aos="fade-up"
+    >
       <div
         className="absolute inset-0"
         style={{
@@ -94,7 +97,12 @@ const ProjectSection = () => {
         </div>
         <Slider {...settings} className="">
           {projects.map((project, index) => (
-            <div key={index} className="px-2" data-aos="fade-up" data-aos-delay={index * 200}>
+            <div
+              key={index}
+              className="px-2"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
+            >
               <div className="relative group overflow-hidden block">
                 {/* Image with zoom effect */}
                 <img
@@ -105,7 +113,7 @@ const ProjectSection = () => {
 
                 {/* Sliding text with Read More Button */}
                 <div
-                  className="absolute right-0 bottom-0 w-fit px-6 py-4 flex flex-col items-start 
+                  className="absolute right-0 bottom-0 w-72  px-6 py-4 flex flex-col items-start 
                            bg-white translate-x-full translate-z-full  group-hover:translate-x-0 group-hover-0
                            opacity-0 group-hover:opacity-100 group-hover:z-10 perspective-distant
                            duration-700 transition-all ease-in-out uppercase text-sm text-left shadow-lg"
