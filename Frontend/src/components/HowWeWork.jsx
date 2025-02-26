@@ -9,7 +9,7 @@ const steps = [
 ];
 
 const Step = ({ id, title, Icon, index }) => (
-  <div className="text-center relative flex flex-col items-center">
+  <div className="text-center relative flex flex-col items-center" data-aos="fade-up" data-aos-delay={index * 300}>
     {/* Icon Container */}
     <div className="w-24 h-24 group flex items-center border justify-center rounded-full transition-all duration-1000 border-primary text-primary bg-white hover:bg-transparent hover:text-black relative">
       <Icon size={70} aria-hidden="true" />
@@ -50,7 +50,7 @@ export default function HowWeWork() {
   const memoizedSteps = useMemo(() => steps, []);
 
   return (
-    <div className="text-center py-10 px-5 bg-black text-white">
+    <div className="text-center py-10 px-5 bg-black text-white" data-aos="fade-up">
       <div className="px-4 container mx-auto">
         <p className="text-lg text-primary uppercase font-medium flex items-center justify-center gap-2">
           <span className="h-[2px] w-7 bg-primary"></span> How We Work{" "}

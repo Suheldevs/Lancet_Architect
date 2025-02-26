@@ -4,7 +4,7 @@ const DirectorMessage = () => {
   return (
     <section className="container mx-auto px-6 lg:py-14 py-12 flex flex-col md:flex-row items-center gap-10">
       {/* Left Content - 7 Columns */}
-      <div className="md:w-7/12">
+      <div className="md:w-7/12" data-aos="zoom-in">
       <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
          <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
@@ -34,7 +34,7 @@ const DirectorMessage = () => {
       </div>
 
       {/* Right Image - 5 Columns */}
-      <div className="md:w-5/12 flex justify-center">
+      <div className="md:w-5/12 flex justify-center" data-aos="zoom-in">
         <img
           src="https://picsum.photos/400/350"
           alt="Director"

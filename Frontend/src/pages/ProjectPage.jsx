@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Breadcrum from "../components/Breadcrum";
 
@@ -64,7 +63,6 @@ const ProjectPage = () => {
               to={`/projects/${project.slug}`}
               className="relative group overflow-hidden block"
             >
-              {/* Image with zoom effect */}
               <img
                 src={project.mainImage}
                 alt={project.title}

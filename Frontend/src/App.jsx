@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,8 +12,16 @@ const Home = lazy(() => import('./pages/Home'));
 const AboutUs = lazy(() => import('./pages/AboutUs'));
 const ProjectPage = lazy(() => import('./pages/ProjectPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
-
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Ensures animation runs only once
+      easing: "ease-in-out", // Smooth animation
+    });
+  }, []);
   return (
     <BrowserRouter>
       <Header />

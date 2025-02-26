@@ -28,6 +28,7 @@ const Header = () => {
 
   return (
     <header
+    data-aos="zoom-in" data-aos-delay='1500'
       className={`fixed left-1/2 transform -translate-x-1/2 w-full flex items-center justify-between px-6 md:px-12 py-4 z-50 transition-all ease-in-out duration-1000 ${
         scrolled
           ? "bg-black/90 backdrop-blur-lg shadow-lg"
