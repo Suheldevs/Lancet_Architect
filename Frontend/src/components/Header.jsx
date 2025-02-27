@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from '../assets/logo.png'
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,9 +28,9 @@ const Header = () => {
   ];
 
   return (
+    <>
     <header
-  
-      className={`fixed left-1/2 transform -translate-x-1/2 w-full flex items-center justify-between px-6 md:px-12 py-4 z-50 transition-all ease-in-out duration-1000 ${
+      className={`lg:flex hidden fixed left-1/2 transform -translate-x-1/2 w-full  items-center justify-between px-6 md:px-12 py-4 z-50 transition-all ease-in-out duration-1000 ${
         scrolled
           ? "bg-black/90 backdrop-blur-lg shadow-lg"
           : "bg-black/10 hover:bg-black/50 backdrop-blur-sm top-5 lg:max-w-[1200px] 2xl:max-w-[1400px] rounded-xl"
@@ -101,6 +102,10 @@ const Header = () => {
         )}
       </AnimatePresence>
     </header>
+    <div className={`lg:hidden z-50 block w-full fixed top-0  ${scrolled ? "bg-black/90 backdrop-blur-lg shadow-lg ": '' }`} >
+      <MobileMenu/>
+    </div>
+    </>
   );
 };
 

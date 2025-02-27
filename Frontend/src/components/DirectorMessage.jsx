@@ -5,10 +5,10 @@ const DirectorMessage = () => {
     <section className="container mx-auto px-6 lg:py-14 py-12 flex flex-col md:flex-row items-center gap-10">
       {/* Left Content - 7 Columns */}
       <div className="md:w-7/12" data-aos="zoom-in">
-      <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
+      <p className="lg:text-lg text-primary uppercase font-medium flex items-center gap-2">
          <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 messiri">
+        <h2 className="lg:text-3xl text-xl font-bold text-gray-900 mb-4 messiri">
           About Ms. Unknown
         </h2>
         <p className="text-gray-700 mb-2 leading-relaxed">

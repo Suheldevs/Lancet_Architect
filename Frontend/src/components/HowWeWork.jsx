@@ -1,6 +1,6 @@
 import { Lightbulb, Box, Ruler, Building } from "lucide-react";
 import { useMemo } from "react";
-import bg from '../assets/pattern/banner2.jpg'
+import bg from "../assets/pattern/banner2.jpg";
 const steps = [
   { id: 1, title: "Concept Ready", icon: Box },
   { id: 2, title: "Idea Works!", icon: Lightbulb },
@@ -9,7 +9,11 @@ const steps = [
 ];
 
 const Step = ({ id, title, Icon, index }) => (
-  <div className="text-center relative flex flex-col items-center" data-aos="fade-up" data-aos-delay={index * 300}>
+  <div
+    className="text-center relative flex flex-col items-center"
+    data-aos="fade-up"
+    data-aos-delay={index * 300}
+  >
     {/* Icon Container */}
     <div className="w-24 h-24 group flex items-center border justify-center rounded-full transition-all duration-1000 border-primary text-primary bg-white hover:bg-transparent hover:text-black relative">
       <Icon size={60} aria-hidden="true" />
@@ -19,9 +23,9 @@ const Step = ({ id, title, Icon, index }) => (
       </div>
     </div>
     {/* Title & Description */}
-    <h3 className="font-semibold mt-3 text-lg text-white">{title}</h3>
-    <p className="text-gray-300 text-sm mt-1 max-w-xs mx-auto px-2">
-      There are many variations of that passages of Lorem available more.
+    <h3 className="font-semibold mt-3 lg:text-lg text-white">{title}</h3>
+    <p className="text-gray-300   text-sm mt-1 max-w-xs mx-auto lg:px-2">
+      There are many variations of that <span className="lg:inline hidden"> passages of Lorem available more.</span>
     </p>
 
     {/* Arrow SVG (Hidden for last step) */}
@@ -49,30 +53,31 @@ const Step = ({ id, title, Icon, index }) => (
 export default function HowWeWork() {
   const memoizedSteps = useMemo(() => steps, []);
 
-
-  
   return (
-    <div className="text-center py-10 px-5 bg-black z-10 text-white" data-aos="fade-up">
+    <div
+      className="text-center py-10 px-5 bg-black z-10 text-white"
+      data-aos="fade-up"
+    >
       <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage: `url(${bg})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    opacity: 0.2,
-                    zIndex: -1,
-                  }}
-                ></div>
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.2,
+          zIndex: -1,
+        }}
+      ></div>
       <div className="px-4 container mx-auto">
-        <p className="text-lg text-primary uppercase font-medium flex items-center justify-center gap-2">
+        <p className="lg:text-lg text-primary uppercase font-medium flex items-center justify-center gap-2">
           <span className="h-[2px] w-7 bg-primary"></span> How We Work{" "}
           <span className="h-[2px] w-7 bg-primary"></span>
         </p>
-        <h2 className="text-3xl font-bold text-white mb-6 messiri">
+        <h2 className="lg:text-3xl text-xl font-bold text-white mb-6 messiri">
           Take a tour of our work process
         </h2>
       </div>
-      <div className="grid grid-cols-4 gap-6 container mx-auto">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-6 container mx-auto">
         {memoizedSteps.map(({ id, title, icon }, index) => (
           <Step key={id} id={id} title={title} Icon={icon} index={index} />
         ))}

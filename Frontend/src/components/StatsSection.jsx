@@ -20,15 +20,15 @@ const StatsComponent = () => {
       data-aos="fade-up"
     >
       <div className="container mx-auto px-4 -mt-4 ">
-        <p className="text-lg text-primary uppercase font-bold flex items-center justify-center gap-2">
+        <p className="lg:text-lg  text-primary uppercase font-bold flex items-center justify-center gap-2">
           <span className="h-[2px] w-7 bg-primary"></span> Our Stats{" "}
           <span className="h-[2px] w-7 bg-primary"></span>
         </p>
-        <h2 className="text-3xl font-bold text-white text-center mb-6 messiri">
+        <h2 className="lg:text-3xl text-xl font-bold text-white text-center lg:mb-6 messiri">
           Together we can envision, inspire and transform your business
         </h2>
       </div>
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-12 mt-14">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-12 mt-6 lg:mt-14">
         {stats.map(({ id, icon, title, value },index) => (
           <div
           data-aos="fade-up"

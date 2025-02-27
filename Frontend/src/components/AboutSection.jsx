@@ -5,8 +5,8 @@ import pattern from '../assets/pattern/pattern2.png'
 import pencil from '../assets/pattern/pencil.png'
 const AboutSection = () => {
   return (
-    <section className="relative container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-4" >
-<div className="absolute z-20  top-10 right-0 rotate-45 p-4 bg-white rounded-full">
+    <section className="relative container mx-auto px-4 lg:py-14 md:py-12 py-10 flex flex-col md:flex-row items-center gap-4" >
+<div className="lg:block hidden absolute z-20  top-10 right-0 rotate-45 lg:p-4 bg-white rounded-full">
 <img src={pencil} alt='pencile ' className="h-16 animate-bounce "/>
 </div>
 
@@ -22,7 +22,7 @@ const AboutSection = () => {
               zIndex: -1,
             }}
           ></div>
-        <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
+        <p className="lg:text-lg text-primary uppercase font-medium flex items-center gap-2">
          <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
         <h2 className="text-2xl md:text-3xl font-bold mt-2 messiri">
@@ -56,7 +56,7 @@ const AboutSection = () => {
       </div>
 
       {/* Right Side Image - col-5 */}
-      <div className="md:w-5/12" data-aos="zoom-in">
+      <div className="md:w-5/12 lg:block hidden" data-aos="zoom-in">
         <img
           src="https://picsum.photos/500/500
 " 

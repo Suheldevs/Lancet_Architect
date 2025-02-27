@@ -55,9 +55,9 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="lg:py-14 py-12 grid md:grid-cols-2" data-aos="fade-up">
+    <section className="lg:py-14 md:py-12 py-10 grid md:grid-cols-2" data-aos="fade-up">
       {/* Left Image */}
-      <div className="w-full" data-aos="zoom-in" data-aos-delay='200'>
+      <div className="w-full lg:block hidden" data-aos="zoom-in" data-aos-delay='200'>
         <img
           src="https://picsum.photos/800/600"
           alt="Architectural Design"
@@ -66,11 +66,11 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Right Content */}
-      <div className="py-6 px-10 bg-gray-50 flex flex-col justify-center ">
-        <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
+      <div className="lg:py-6 lg:px-10 px-4 bg-gray-50 flex flex-col justify-center ">
+        <p className="lg:text-lg text-primary uppercase font-medium flex items-center gap-2">
           <span className="h-[2px] w-7 bg-primary"></span> Why Choose Us
         </p>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 messiri">
+        <h2 className="lg:text-3xl text-xl font-bold text-gray-900 mb-6 messiri">
           Transforming Spaces with Excellence
         </h2>
 
