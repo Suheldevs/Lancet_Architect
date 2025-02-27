@@ -73,7 +73,7 @@ const ProjectSection = () => {
 
   return (
     <section
-      className="py-12 relative lg:pb-14 pt-6 container mx-auto px-4"
+      className=" pt-4 relative pb-6  container mx-auto px-4"
       data-aos="fade-up"
     >
       <div
@@ -88,10 +88,10 @@ const ProjectSection = () => {
       ></div>
       <div className="">
         <div className="">
-          <p className="text-lg text-primary uppercase font-medium flex items-center gap-2">
+          <p className="lg:text-lg text-primary uppercase font-medium flex items-center gap-2">
             <span className="h-[2px] w-7 bg-primary"></span> OUR LATEST PROJECTS
           </p>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 messiri">
+          <h2 className="lg:text-3xl text-xl font-bold text-gray-900 mb-6 messiri">
             Take a tour of our work
           </h2>
         </div>
@@ -114,8 +114,8 @@ const ProjectSection = () => {
                 {/* Sliding text with Read More Button */}
                 <div
                   className="absolute right-0 bottom-0 w-72  px-6 py-4 flex flex-col items-start 
-                           bg-white translate-x-full translate-z-full  group-hover:translate-x-0 group-hover-0
-                           opacity-0 group-hover:opacity-100 group-hover:z-10 perspective-distant
+                           bg-white lg:translate-x-full translate-z-full  group-hover:translate-x-0 group-hover-0
+                           lg:opacity-0 opacity-100 group-hover:opacity-100 group-hover:z-10 perspective-distant
                            duration-700 transition-all ease-in-out uppercase text-sm text-left shadow-lg"
                 >
                   {/* Project Title */}

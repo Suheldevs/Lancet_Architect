@@ -3,6 +3,17 @@ import bgvideo from "../assets/Lancet-video.mp4";
 import { ChevronsRight } from "lucide-react";
 
 const HeroSection = () => {
+
+  const handleButton = () => {
+    window.scrollTo({
+      top: window.innerHeight * 0.92,  // 600px tak scroll karega
+      behavior: "smooth", // Smooth scrolling effect
+    });
+  };
+  
+
+
+
   return (
     <div className="relative w-full lg:h-screen h-[95vh] overflow-hidden">
       {/* Video Background */}
@@ -22,8 +33,8 @@ const HeroSection = () => {
 
       <div className="rounded-full overflow-hidden w-fit bg-black/10 hover:bg-black/30 backdrop-blur text-white lg:text-lg text-sm font-medium px-4 py-2  flex items-center space-x-2">
   <span className="relative flex justify-center items-center h-4 w-4">
-    <span className="absolute animate-ping h-5 w-5 bg-red-400 rounded-full opacity-75 duration-500"></span>
-    <span className="relative h-3 w-3 bg-red-500 rounded-full"></span>
+    <span className="absolute animate-ping h-5 w-5 bg-red-200 rounded-full opacity-75 duration-500"></span>
+    <span className="relative h-3 w-3 bg-red-400 rounded-full"></span>
   </span>
   <span>Welcome to</span>
 </div>
@@ -37,17 +48,17 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Section Buttons */}
-      <div className="absolute z-30 left-5 lg:bottom-8 bottom-52 lg:left-1/2 transform lg:-translate-x-1/2 flex space-x-6">
+      <div className="absolute z-30 left-5 lg:bottom-8 bottom-52 lg:left-1/2 transform lg:-translate-x-1/2 flex lg:space-x-6 space-x-4">
       <Link
-            to="/"
-            className="btn lg:min-w-[200px] min-w-[130px] lg:text-lg text-sm relative overflow-hidden rounded-full bg-black/10 hover:bg-black/30 backdrop-blur b-white/20 text-white lg:px-6 px-4 lg:py-3 py-2 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
+            to="/contact"
+            className="btn lg:min-w-[200px] min-w-[130px] border border-gray-400/30 lg:text-lg text-sm relative overflow-hidden rounded-full bg-black/10 hover:bg-black/30 backdrop-blur b-white/20 text-white lg:px-6 px-4 lg:py-3 py-2 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
             data-hover="+91-8707438955"
           >
             <span>Contact Now</span>
           </Link>
         <Link
-            to="/"
-            className="btn  lg:min-w-[200px] min-w-[130px] lg:text-lg text-sm relative overflow-hidden rounded-full bg-black/10 hover:bg-black/30 backdrop-blur b-white/20 text-white lg:px-6 px-4 lg:py-3 py-2 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
+            to="/projects"
+            className="btn  lg:min-w-[200px] min-w-[130px] border border-gray-400/30 lg:text-lg text-sm relative overflow-hidden rounded-full bg-black/10 hover:bg-black/30 backdrop-blur b-white/20 text-white lg:px-6 px-4 lg:py-3 py-2 inline-flex justify-center items-center font-medium transition-all duration-500 ease-in-out"
             data-hover="View Projects"
           >
             <span>View Projects</span> 
@@ -55,9 +66,9 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute lg:bottom-1 bottom-5 transform -translate-x-1/2 animate-bounce left-1/2">
-        <ChevronsRight className="rotate-90 text-white " />
-      </div>
+      <button onClick={handleButton} className="absolute z-30 lg:bottom-1 bottom-5 transform -translate-x-1/2 animate-bounce left-1/2 cursor-pointer">
+        <ChevronsRight className="rotate-90 text-gray-200 " />
+      </button>
     </div>
   );
 };

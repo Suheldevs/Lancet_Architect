@@ -5,13 +5,13 @@ import pattern from '../assets/pattern/pattern2.png'
 import pencil from '../assets/pattern/pencil.png'
 const AboutSection = () => {
   return (
-    <section className="relative container mx-auto px-4 lg:py-14 md:py-12 py-10 flex flex-col md:flex-row items-center gap-4" >
+    <section className="relative container mx-auto px-4 lg:py-14 md:py-12 py-10 flex flex-col md:flex-row items-center gap-4" id='about' >
 <div className="lg:block hidden absolute z-20  top-10 right-0 rotate-45 lg:p-4 bg-white rounded-full">
 <img src={pencil} alt='pencile ' className="h-16 animate-bounce "/>
 </div>
 
       {/* Left Side Content - col-7 */}
-      <div className="relative z-10  md:w-7/12 text-left">
+      <div className="relative z-10  lg:w-7/12 text-left">
       <div
             className="absolute inset-0"
             style={{
@@ -25,7 +25,7 @@ const AboutSection = () => {
         <p className="lg:text-lg text-primary uppercase font-medium flex items-center gap-2">
          <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
-        <h2 className="text-2xl md:text-3xl font-bold mt-2 messiri">
+        <h2 className="text-2xl lg:text-3xl font-bold mt-2 messiri">
           Best Interior & Architectural Company in India
         </h2>
         <p className="text-gray-700 mt-4 leading-relaxed text-justify">
@@ -50,13 +50,13 @@ const AboutSection = () => {
         </p>
 
         {/* Button */}
-        <Link data-aos="fade-up" className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
+        <Link to='/contact' data-aos="fade-up" className="mt-6 group inline-block bg-primary-btn text-white px-6 py-3 hover:tracking-wider  items-center space-x-2 hover:bg-[#7A5F4D] transition-all duration-600">
           Learn More<MdKeyboardDoubleArrowRight className="inline  group-hover:pl-4 w-9 transition-all duration-500  text-xl"/>
         </Link>
       </div>
 
       {/* Right Side Image - col-5 */}
-      <div className="md:w-5/12 lg:block hidden" data-aos="zoom-in">
+      <div className="lg:w-5/12 lg:block hidden" data-aos="zoom-in">
         <img
           src="https://picsum.photos/500/500
 " 

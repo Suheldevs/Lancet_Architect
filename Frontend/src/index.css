@@ -59,7 +59,7 @@ background: #ce0202;
     /* background: rgba(255, 255, 255, 0.2); Blur effect */
     /* backdrop-filter: blur(10px); */
     font-family: inherit;
-    border: none;
+    /* border: none; */
     /* padding: 15px 30px; */
     display: flex;
     align-items: center;
@@ -132,6 +132,12 @@ background: #ce0202;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   transition: all 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .bars{
+    height: 3px;
+  }
 }
 
 .bar1, .bar3 {

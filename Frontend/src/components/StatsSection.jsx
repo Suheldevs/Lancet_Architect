@@ -28,7 +28,7 @@ const StatsComponent = () => {
           Together we can envision, inspire and transform your business
         </h2>
       </div>
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-12 mt-6 lg:mt-14">
+      <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-12 mt-6 lg:mt-14">
         {stats.map(({ id, icon, title, value },index) => (
           <div
           data-aos="fade-up"

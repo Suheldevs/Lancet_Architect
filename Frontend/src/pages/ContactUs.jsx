@@ -22,16 +22,16 @@ const ContactUs = () => {
           { label: "Contact", link: "/Contact" },
         ]}
       />
-      <div className="conatiner px-4 mx-auto flex flex-col md:flex-row justify-center py-10 lg:py-14 md:py-12 bg-gray-100">
+      <div className="conatiner lg:px-4 px-2 mx-auto flex flex-col lg:flex-row justify-center py-10 lg:py-14 md:py-12 bg-gray-100">
         {/* Left Section - Contact Info Card */}
-        <div className="bg-white shadow-lg  py-2 px-6 md:w-1/3 w-full text-center">
+        <div className="bg-white shadow-lg  py-2  lg:w-1/3 w-full text-center">
           <h2 className="text-4xl font-bold  messiri italic tracking-widest">
             <span className="block -ml-24">Let's</span> Talk !
           </h2>
-          <p className="text-gray-700 text-base mb-6 ">
+          <p className="text-gray-700 text-base mb-6 px-6">
             Tell us about your dream project, we will make it come true
           </p>
-          <div className="flex space-y-1 flex-col text-start">
+          <div className="flex space-y-2 flex-col text-start lg:px-6 px-4">
             <h3 className="text-2xl font-semibold messiri mb-2">
               Contact Details
             </h3>
@@ -49,7 +49,7 @@ const ContactUs = () => {
               </a>
             </div>
             <div className="text-start ">
-              <FaEnvelope className="inline-block text-black/90  text-xl mt-2 mr-2" />
+              <FaEnvelope className="inline-block text-black/90  text-xl mr-2" />
               {/* <div className="ms-2"> */}
               <a href="mailto:contact@lancetarchitect.com">
                 <span className="group-hover:text-gray-400">
@@ -66,7 +66,7 @@ const ContactUs = () => {
             </div>
           </div>
           {/* Social Icons */}
-          <div className="flex space-x-5 my-2  ">
+          <div className="flex space-x-5 my-2  lg:px-6 px-4">
             {[
               { icon: FaFacebookF, link: "#" },
               { icon: FaTwitter, link: "#" },
@@ -82,7 +82,7 @@ const ContactUs = () => {
               </Link>
             ))}
           </div>
-          <div className="mt-6">
+          <div className="mt-6 px-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.066656370495!2d80.9430907!3d26.7741451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd043e42fa3d%3A0xa8fed4d13bd8049!2sLANCET%20ARCHITECTS!5e0!3m2!1sen!2sin!4v1740479047816!5m2!1sen!2sin"
              className="h-52 w-full"
@@ -94,7 +94,7 @@ const ContactUs = () => {
         </div>
 
         {/* Right Section - Contact Form */}
-        <div className="md:w-1/2 w-full mt-6 md:mt-0 md:ml-8">
+        <div className="lg:w-1/2 w-full mt-6 lg:mt-0 lg:ml-8">
           <form className="bg-white shadow-lg p-6">
             <h2 className="messiri text-2xl font-bold mb-4">Get in Touch</h2>
             <input

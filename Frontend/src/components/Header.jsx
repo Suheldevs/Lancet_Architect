@@ -23,8 +23,8 @@ const Header = () => {
     { id: "projects", label: "Projects", width: "w-28" },
     { id: "gallery", label: "Gallery", width: "w-24" },
     { id: "testimonial", label: "Testimonial", width: "w-36" },
-    { id: "contact", label: "Contact", width: "w-24" },
     { id: "blogs", label: "Blog", width: "w-20" },
+    { id: "contact", label: "Contact Us", width: "w-32" },
   ];
 
   return (

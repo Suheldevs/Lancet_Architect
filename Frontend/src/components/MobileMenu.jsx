@@ -44,7 +44,7 @@ const menuItems = [
     },
     {
       name: "Blog",
-      link: "/blog",
+      link: "/blogs",
       description: "Architecture insights & trends.",
       icon: <FileText size={20} />,
     },

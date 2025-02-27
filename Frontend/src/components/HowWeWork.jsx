@@ -31,7 +31,7 @@ const Step = ({ id, title, Icon, index }) => (
     {/* Arrow SVG (Hidden for last step) */}
     {index !== steps.length - 1 && (
       <svg
-        className="absolute md:block hidden right-0 top-5 translate-y-1/2 translate-x-24"
+        className="absolute lg:block hidden right-0 top-5 translate-y-1/2 translate-x-24"
         xmlns="http://www.w3.org/2000/svg"
         width="160"
         height="54"

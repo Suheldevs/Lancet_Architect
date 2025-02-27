@@ -16,6 +16,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import ProjectDetailPage from './pages/ProjectDetail';
 import BlogDetail from './pages/BlogDetail';
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   useEffect(() => {
     AOS.init({
@@ -27,7 +28,9 @@ function App() {
   return (
     <BrowserRouter>
       <Suspense fallback={<div className='flex justify-center items-center min-h-screen w-screen'><Loader/></div>}>
+      <ScrollToTop/>
       <Header />
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<AboutUs />} />

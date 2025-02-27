@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import cclogo from "../assets/Home/ccogo-suhel.webp";
 import pattern from "../assets/pattern/banner2.jpg";
-import logo from '../assets/logo.png'
+import logo from "../assets/logo.png";
 const Footer = () => {
   return (
     <footer className="relative bg-black/95 text-white">
@@ -26,14 +26,17 @@ const Footer = () => {
           zIndex: -1,
         }}
       ></div>
-      <div className="container mx-auto py-10 px-20 lg:py-12 md:py-12 grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 ">
+      <div className="container mx-auto py-10 lg:px-20 px-4 lg:py-12 md:py-12 grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-2 lg:gap-4 gap-6">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
           <a href="/">
-          <img src={logo} alt="Space Culture" className="h-16 mb-2" />
-         </a>
-          <p className="text-sm mb-2 tracking-wider"> Architects, Interior, Landscape</p>
-          <div className="flex space-x-3 mt-4">
+            <img src={logo} alt="Space Culture" className="h-16 mb-2" />
+          </a>
+          <p className="text-sm mb-2 tracking-wider">
+            {" "}
+            Architects, Interior, Landscape
+          </p>
+          <div className="flex space-x-3 lg:mt-4 lg:mb-0 mb-4">
             {[
               { icon: FaFacebookF, link: "#" },
               { icon: FaTwitter, link: "#" },
@@ -54,24 +57,26 @@ const Footer = () => {
         {/* Useful Links & Our Projects */}
         <div className="">
           <div>
-            <h3 className="text-xl font-semibold mb-6">Useful Links</h3>
+            <h3 className="text-xl font-semibold lg:mb-6 mb-2">Useful Links</h3>
             <ul className="space-y-2 text-base">
               {[
-                "About Us",
-                "Gallery",
-                "Testimonial",
-                "Blog",
-                "Contact Us",
-                "Admin Login",
+                { id: "", label: "Home", width: "w-20" },
+                { id: "about", label: "About Us", width: "w-32" },
+                { id: "projects", label: "Projects", width: "w-28" },
+                // { id: "gallery", label: "Gallery", width: "w-24" },
+                // { id: "testimonial", label: "Testimonial", width: "w-36" },
+                { id: "blogs", label: "Blog", width: "w-20" },
+                { id: "contact", label: "Contact Us", width: "w-32" },
+                { id: "admin", label: "Admin Login", width: "w-32" },
               ].map((item, index) => (
                 <li key={index}>
                   <Link
-                    to="#"
+                    to={`/${item.id}`}
                     className="group flex items-center space-x-2 transition transform hover:translate-x-2"
                   >
                     <MdKeyboardDoubleArrowRight className="text-xl text-gray-400 group-hover:text-red-600 transition-all" />
                     <span className="group-hover:text-gray-400 transition">
-                      {item}
+                      {item.label}
                     </span>
                   </Link>
                 </li>
@@ -80,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-xl font-semibold mb-6">Our Projects</h3>
+          <h3 className="text-xl font-semibold lg:mb-6 mb-2">Our Projects</h3>
           <ul className="space-y-2 text-base">
             {[
               "Commercial",
@@ -107,7 +112,7 @@ const Footer = () => {
 
         {/* Contact Section */}
         <div>
-          <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
+          <h3 className="text-xl font-semibold lg:mb-6 mb-2">Contact Us</h3>
           <div className="space-y-2 text-base">
             <a
               href="tel:8707438955"
@@ -146,7 +151,7 @@ const Footer = () => {
               className="flex items-center space-x-2 mt-2 group"
             >
               <FaMapMarkerAlt className="text-gray-400  text-5xl group-hover:text-red-600" />
-              <span className="group-hover:text-gray-400 text line-clamp-2">
+              <span className="group-hover:text-gray-400 text lg:line-clamp-2">
                 {" "}
                 14, Raibareli Rd, near Sainik Dhaba, Amrapali Vihar, Sainik
                 Nagar, Telibagh, Lucknow, Uttar Pradesh 226012
@@ -157,8 +162,8 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className=" mt-4 border-t border-gray-900 py-2 text-center flex lg:flex-row flex-col justify-center items-center">
-        <p className=" text-sm px-2">
+      <div className=" lg:mt-2 border-t border-gray-900 py-2 text-center flex lg:flex-row flex-col justify-center items-center">
+        <p className=" lg:text-sm text-xs px-2">
           Copyright 2025 Lancet Architect || All Rights Reserved || Designed By
         </p>
         <Link to="https://www.codecrafter.co.in/" target="_blank">

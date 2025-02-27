@@ -6,19 +6,19 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 function Breadcrum({ title, items }) {
   return (
     <div
-      className="relative h-[350px] w-screen bg-center bg-no-repeat bg-cover"
+      className="relative lg:h-[350px] h-[250px] w-screen bg-center bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${breadcrum})` }}
     >
       {/* Overlay for better readability */}
       <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Centered Content */}
-      <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
-        <h1 className="text-7xl font-bold ">{title}</h1>
+      <div className="absolute top-2/3 lg:left-1/2 transform lg:-translate-x-1/2 -translate-y-1/2 text-white lg:text-center px-2">
+        <h1 className="lg:text-7xl text-4xl font-bold ">{title}</h1>
 
         {/* Breadcrumb Navigation */}
         {items && (
-          <ul className="mt-2 flex justify-center items-center text-lg group">
+          <ul className="mt-2 flex lg:justify-center justify-start items-center lg:text-lg group">
             {items.map((item, index) => (
               <li key={index} className="opacity-95 flex items-center ">
                 <Link
@@ -29,7 +29,7 @@ function Breadcrum({ title, items }) {
                 </Link>
                 {/* Only show arrow if it's not the last item */}
                 {index < items.length - 1 && (
-                  <MdKeyboardDoubleArrowRight className="mx-2 text-xl text-gray-100 group-hover:text-gray-300 group-hover:translate-x-2 transition-all" />
+                  <MdKeyboardDoubleArrowRight className="lg:mx-2 mx-1 text-xl text-gray-100 group-hover:text-gray-300 group-hover:translate-x-2 transition-all" />
                 )}
               </li>
             ))}

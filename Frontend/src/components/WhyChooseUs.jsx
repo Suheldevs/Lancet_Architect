@@ -55,7 +55,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="lg:py-14 md:py-12 py-10 grid md:grid-cols-2" data-aos="fade-up">
+    <section className="lg:py-14 md:py-12 py-10 grid  lg:grid-cols-2" data-aos="fade-up">
       {/* Left Image */}
       <div className="w-full lg:block hidden" data-aos="zoom-in" data-aos-delay='200'>
         <img
@@ -71,11 +71,11 @@ const WhyChooseUs = () => {
           <span className="h-[2px] w-7 bg-primary"></span> Why Choose Us
         </p>
         <h2 className="lg:text-3xl text-xl font-bold text-gray-900 mb-6 messiri">
-          Transforming Spaces with Excellence
+        Designing Dreams, Building Reality
         </h2>
 
         {/* Feature Cards */}
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 lg:gap-6 gap-3">
           {features.map((feature,index) => (
             <div
             data-aos="fade-up" data-aos-delay={index * 200}
@@ -95,7 +95,7 @@ const WhyChooseUs = () => {
               <div className="text-white flex justify-center mb-4">
                <span className="bg-primary p-2 shadow-2xl rounded-full"> {feature.icon} </span>
               </div>
-              <h3 className="text-xl font-semibold text-center messiri">
+              <h3 className="lg:text-xl font-semibold text-center messiri">
                 {feature.title}
               </h3>
               {/* <p className="text-gray-600 text-center mt-2 group-hover:text-gray-100">

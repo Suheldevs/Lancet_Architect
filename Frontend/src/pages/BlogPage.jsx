@@ -40,7 +40,7 @@ const BlogPage = () => {
       />
 
       {/* Blog Grid */}
-      <div className="container px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto py-10 lg:py-14">
+      <div className="container lg:px-4 px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto py-10 lg:py-14">
         {blogs.map((article, index) => (
           <div key={index} className="px-2">
             <div className="relative group overflow-hidden shadow-lg cursor-pointer ">

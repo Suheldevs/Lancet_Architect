@@ -91,7 +91,7 @@ const ProjectPage = () => {
         ]}
       />
 
-      <div className="grid grid-cols-3 container mx-auto lg:py-14 md:py-12 py-10 gap-6 px-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 container mx-auto lg:py-14 md:py-12 py-10 gap-6 px-4">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -108,9 +108,9 @@ const ProjectPage = () => {
 
               {/* Sliding text with Read More Button */}
               <div
-                className="absolute right-0 bottom-0 w-fit px-6 py-4 flex flex-col items-start 
-                bg-white translate-x-full translate-z-full  group-hover:translate-x-0 group-hover-0
-                opacity-0 group-hover:opacity-100 group-hover:z-10 perspective-distant
+                className="absolute right-0 bottom-0  lg:w-72 px-6 py-4 flex flex-col items-start 
+                bg-white lg:translate-x-full translate-z-full  group-hover:translate-x-0  group-hover-0
+                lg:opacity-0 opacity-100 group-hover:opacity-100 group-hover:z-10 perspective-distant
                 duration-700 transition-all ease-in-out uppercase text-sm text-left shadow-lg"
               >
                 {/* Project Title */}
