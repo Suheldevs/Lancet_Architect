@@ -77,7 +77,7 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 ml-44 mr-3 left-5  rounded-xl flex flex-co justify-center items-center text-white text-lg  -z-40"
+            className="fixed inset-0 ml-44 mr-3 lg:left-5  rounded-xl flex justify-center items-center text-white text-lg  -z-40"
           >
             {/* <button
               className="absolute top-6 right-6 text-4xl focus:outline-none"

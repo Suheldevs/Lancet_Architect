@@ -10,10 +10,17 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import cclogo from "../assets/Home/ccogo-suhel.webp";
 import pattern from "../assets/pattern/banner2.jpg";
 import logo from "../assets/logo.png";
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className="relative bg-black/95 text-white">
       <div
@@ -26,7 +33,7 @@ const Footer = () => {
           zIndex: -1,
         }}
       ></div>
-      <div className="container mx-auto py-10 lg:px-20 px-4 lg:py-12 md:py-12 grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-2 lg:gap-4 gap-6">
+      <div className="container mx-auto py-10 xl:px-12 px-4 lg:py-12 md:py-12 grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-2 lg:gap-4 gap-6">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
           <a href="/">
@@ -39,7 +46,7 @@ const Footer = () => {
           <div className="flex space-x-3 lg:mt-4 lg:mb-0 mb-4">
             {[
               { icon: FaFacebookF, link: "#" },
-              { icon: FaTwitter, link: "#" },
+              { icon: FaSquareXTwitter, link: "#" },
               { icon: FaInstagram, link: "#" },
               { icon: FaLinkedinIn, link: "#" },
             ].map(({ icon: Icon, link }, index) => (
@@ -71,6 +78,7 @@ const Footer = () => {
               ].map((item, index) => (
                 <li key={index}>
                   <Link
+                  onClick={scrollToTop}
                     to={`/${item.id}`}
                     className="group flex items-center space-x-2 transition transform hover:translate-x-2"
                   >
@@ -150,8 +158,8 @@ const Footer = () => {
               href="https://maps.app.goo.gl/xNWVtXzzQJ2iNmRM6"
               className="flex items-center space-x-2 mt-2 group"
             >
-              <FaMapMarkerAlt className="text-gray-400  text-5xl group-hover:text-red-600" />
-              <span className="group-hover:text-gray-400 text lg:line-clamp-2">
+              <FaMapMarkerAlt className="text-gray-400 md:text-5xl  group-hover:text-red-600" />
+              <span className="group-hover:text-gray-400  lg:line-clamp-2">
                 {" "}
                 14, Raibareli Rd, near Sainik Dhaba, Amrapali Vihar, Sainik
                 Nagar, Telibagh, Lucknow, Uttar Pradesh 226012

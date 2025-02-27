@@ -8,8 +8,8 @@ import {
   FaPhoneAlt,
   FaTwitter,
 } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import Breadcrum from "../components/Breadcrum";
-import { IoPhonePortrait } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const ContactUs = () => {
@@ -69,7 +69,7 @@ const ContactUs = () => {
           <div className="flex space-x-5 my-2  lg:px-6 px-4">
             {[
               { icon: FaFacebookF, link: "#" },
-              { icon: FaTwitter, link: "#" },
+              { icon: FaSquareXTwitter, link: "#" },
               { icon: FaInstagram, link: "#" },
               { icon: FaLinkedinIn, link: "#" },
             ].map(({ icon: Icon, link }, index) => (
