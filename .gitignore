@@ -1,4 +1,7 @@
 /Backend/node_modules
-AdminPanel/.env
-/AdminPanel/dist
 /AdminPanel/node_modules
+/Frontend/node_modules
+AdminPanel/.env
+/Frontend/.env
+/Backend/.env
+/AdminPanel/dist
