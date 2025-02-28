@@ -10,6 +10,8 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { Mails } from 'lucide-react';
+
 import { FaSquareXTwitter } from "react-icons/fa6";
 import cclogo from "../assets/Home/ccogo-suhel.webp";
 import pattern from "../assets/pattern/banner2.jpg";
@@ -149,7 +151,7 @@ const Footer = () => {
               href="mailto:info@lancetarchitect.com"
               className="flex items-center space-x-2 mt-2 group"
             >
-              <FaEnvelope className="text-gray-400 group-hover:text-red-600" />{" "}
+              <Mails  className="text-gray-400 group-hover:text-red-600" />{" "}
               <span className="group-hover:text-gray-400">
                 info@lancetarchitect.com
               </span>
@@ -158,7 +160,7 @@ const Footer = () => {
               href="https://maps.app.goo.gl/xNWVtXzzQJ2iNmRM6"
               className="flex items-center space-x-2 mt-2 group"
             >
-              <FaMapMarkerAlt className="text-gray-400 md:text-5xl  group-hover:text-red-600" />
+              <FaMapMarkerAlt className="text-gray-400 md:text-5xl text-4xl group-hover:text-red-600" />
               <span className="group-hover:text-gray-400  lg:line-clamp-2">
                 {" "}
                 14, Raibareli Rd, near Sainik Dhaba, Amrapali Vihar, Sainik

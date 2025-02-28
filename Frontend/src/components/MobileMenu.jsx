@@ -64,7 +64,7 @@ export default function MobileMenu() {
   
 
   return (
-    <div className=" flex  justify-between  items-center p-2 px-4 w-full">
+    <div className=" flex justify-between  items-center p-2 px-4 w-full">
       <a href="/" className="w-32">
         <img src={logo} />
       </a>
@@ -81,7 +81,7 @@ export default function MobileMenu() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          className="absolute mx-2 top-16 left-1/2 -translate-x-1/2 border border-black/10 w-full bg-black/80 backdrop-blur-lg  rounded-lg shadow-lg p-3"
+          className="absolute  top-16 left-1/2 -translate-x-1/2 border border-black/10 w-full bg-black/60 backdrop-blur-xl  rounded-lg shadow-lg p-3"
         >
           {menuItems.map((item, index) => (
             <div

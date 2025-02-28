@@ -84,7 +84,7 @@ const ProjectPage = () => {
   return (
     <section>
       <Breadcrum
-        title="Recent Project"
+        title="Projects "
         items={[
           { label: "Home", link: "/" },
           { label: "Projects", link: "/projects" },
@@ -108,7 +108,7 @@ const ProjectPage = () => {
 
               {/* Sliding text with Read More Button */}
               <div
-                className="absolute right-0 bottom-0  lg:w-72 px-6 py-4 flex flex-col items-start 
+                className="absolute right-0 bottom-0  w-72  px-6 py-4 flex flex-col items-start 
                 bg-white lg:translate-x-full translate-z-full  group-hover:translate-x-0  group-hover-0
                 lg:opacity-0 opacity-100 group-hover:opacity-100 group-hover:z-10 perspective-distant
                 duration-700 transition-all ease-in-out uppercase text-sm text-left shadow-lg"

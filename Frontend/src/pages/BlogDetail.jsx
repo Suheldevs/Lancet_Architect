@@ -69,18 +69,18 @@ const BlogDetail = () => {
             className="w-full h-[400px] object-cover  shadow-md"
           />
           <p className="text-gray-500 text-sm mt-4">{article.date}</p>
-          <h1 className="text-3xl font-semibold mt-2">{article.title}</h1>
+          <h1 className="lg:text-3xl text-xl font-semibold mt-2">{article.title}</h1>
 
           {/* Blog Description (Render as HTML) */}
           <div
-            className="mt-4 text-lg text-gray-700 leading-relaxed"
+            className="mt-4 lg:text-lg text-gray-700 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: article.description }}
           />
 
           {/* Back to Blogs Button */}
           <Link
             to="/blogs"
-            className="mt-6 inline-block bg-primary-btn text-white px-6 py-3 rounded-lg hover:bg-[#7A5F4D] transition-all duration-300"
+            className="mt-6 inline-block bg-primary-btn text-white px-6 py-3  hover:bg-[#7A5F4D] transition-all duration-300"
           >
             Back to Blogs
           </Link>
@@ -89,7 +89,7 @@ const BlogDetail = () => {
         {/* Related Blogs Section */}
         <div className="lg:col-span-1 border p-2 border-gray-100 ">
           <h2 className="text-2xl font-semibold mb-4 messiri ">Other Blogs</h2>
-          <div className="space-y-6">
+          <div className="space-y-6 max-h-[90vh] overflow-y-auto">
             {relatedBlogs.map((blog) => (
               <Link
                 to={`/blogs/${blog.slug}`}
