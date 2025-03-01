@@ -14,7 +14,7 @@ function Testimonial() {
 </div>
       <div className="md:px-10 px-4 ">
         <iframe
-          src="https://widget.tagembed.com/2154852"
+          src="https://widget.tagembed.com/2156631"
           className="w-full h-96"
           title="Xpress Tour & Travels Reviews"
         ></iframe>
@@ -23,5 +23,6 @@ function Testimonial() {
     </div>
   );
 }
+
 
 export default Testimonial;
