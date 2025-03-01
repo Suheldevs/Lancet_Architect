@@ -8,6 +8,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import pattern from "../assets/pattern/pattern2.png";
+import image from '../assets/Home/whyChooseUs.jpg'
 const features = [
   {
     id: 1,
@@ -59,7 +60,7 @@ const WhyChooseUs = () => {
       {/* Left Image */}
       <div className="w-full lg:block hidden" data-aos="zoom-in" data-aos-delay='200'>
         <img
-          src="https://picsum.photos/800/600"
+          src={image}
           alt="Architectural Design"
           className="shadow-lg object-cover w-full h-full"
         />

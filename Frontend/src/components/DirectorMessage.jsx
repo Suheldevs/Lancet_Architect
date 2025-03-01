@@ -1,5 +1,5 @@
 import React from "react";
-
+import image  from '../assets/Home/director.jpg'
 const DirectorMessage = () => {
   return (
     <section className="container text-justify mx-auto lg:px-6 px-4 lg:py-14 py-12 flex flex-col lg:flex-row items-center gap-10">
@@ -9,7 +9,7 @@ const DirectorMessage = () => {
          <span className="h-[2px] w-7 bg-primary"></span> Welcome To Lancet Architect
         </p>
         <h2 className="lg:text-3xl text-xl font-bold text-gray-900 mb-4 messiri">
-          About Ms. Unknown
+          About Lancet's Director
         </h2>
         <p className="text-gray-700 mb-2 leading-relaxed">
           As the Director of <strong>Lancet Architect</strong>, I am thrilled to
@@ -36,9 +36,9 @@ const DirectorMessage = () => {
       {/* Right Image - 5 Columns */}
       <div className="lg:w-5/12 flex justify-center w-full " data-aos="zoom-in">
         <img
-          src="https://picsum.photos/400/350"
+          src={image}
           alt="Director"
-          className=" shadow-lg object-cover w-full h-full"
+          className=" shadow-lg object-cover lg:w-fit w-full lg:h-[400px] h-full"
         />
       </div>
     </section>

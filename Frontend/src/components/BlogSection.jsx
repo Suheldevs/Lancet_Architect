@@ -82,7 +82,7 @@ const BlogSection = () => {
           <span className="h-[2px] w-7 bg-primary"></span> OUR LATEST Blog
         </p>
         <h2 className="lg:text-3xl text-xl font-bold text-gray-900 mb-6 messiri">
-          Take a tour of our letest blogs
+          Take a tour of our latest blogs
         </h2>
       </div>
 
@@ -124,10 +124,10 @@ const BlogSection = () => {
                   <h3 className="font-semibold lg:text-xl">{article.title}</h3>
 
                   {/* Render HTML Description */}
-                  <div
+                  {/* <div
                     className="text-sm line-clamp-3 mt-1"
                     dangerouslySetInnerHTML={{ __html: article.description }}
-                  />
+                  /> */}
 
                   {/* Read More Button */}
                   <Link

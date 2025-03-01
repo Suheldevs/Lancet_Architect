@@ -29,7 +29,7 @@ const HeroSection = () => {
       </video>
 
       {/* Overlay Text */}
-      <div className="absolute z-30 left-5 lg:bottom-12 bottom-52 lg:left-1/2 transform lg:-translate-x-1/2 -translate-y-1/2 lg:text-center text-white">
+      <div className="absolute z-30 left-5 lg:bottom-12 bottom-56 lg:left-1/2 transform lg:-translate-x-1/2 -translate-y-1/2 lg:text-center text-white">
 
       <div className="rounded-full overflow-hidden w-fit bg-black/10 hover:bg-black/30 backdrop-blur text-white lg:text-lg text-sm font-medium px-4 py-2  flex items-center space-x-2">
   <span className="relative flex justify-center items-center h-4 w-4">

@@ -50,7 +50,7 @@ const ProjectDetailPage = () => {
   return (
     <section>
       <Breadcrum
-        title='Project Details'
+        title='Project Detail'
         items={[
           { label: "Home", link: "/" },
           { label: "Projects", link: "/projects" },
@@ -63,16 +63,16 @@ const ProjectDetailPage = () => {
           <div>
             <img src={project.mainImageUrl} alt={project.title} className="w-full shadow-lg" />
             <div className="mt-4">
-              <h1 className="text-3xl font-bold messiri">{project.title}</h1>
-              <p className="mt-2 text-gray-700">{project.description}</p>
+              <h1 className="lg:text-2xl text-xl font-bold messiri">{project.title}</h1>
+              <p className="mt-2 text-gray-700 text-justify">{project.description}</p>
             </div>
           </div>
 
           <div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {project.otherImages?.map((img, index) => (
                 <div key={index} className="relative cursor-pointer" onClick={() => openModal(index)}>
-                  <img src={img} alt={`Project ${index}`} className="shadow-md" />
+                  <img src={img} alt={`Project ${index}`} className="shadow-md max-h-80 w-full" />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition">
                     <Plus className="text-white w-10 h-10" />
                   </div>

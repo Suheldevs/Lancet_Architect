@@ -5,7 +5,7 @@ import pattern from '../assets/pattern/pattern2.png'
 import pencil from '../assets/pattern/pencil.png'
 const AboutSection = () => {
   return (
-    <section className="relative container mx-auto px-4 lg:py-14 md:py-12 py-10 flex flex-col md:flex-row items-center gap-4" id='about' >
+    <section className="relative container mx-auto px-4 lg:py-14 md:py-12 py-10 flex flex-col md:flex-row items-center lg:gap-6 gap-4" id='about' >
 <div className="lg:block hidden absolute z-20  top-10 right-0 rotate-45 lg:p-4 bg-white rounded-full">
 <img src={pencil} alt='pencile ' className="h-16 animate-bounce "/>
 </div>
@@ -58,10 +58,10 @@ const AboutSection = () => {
       {/* Right Side Image - col-5 */}
       <div className="lg:w-5/12 lg:block hidden" data-aos="zoom-in">
         <img
-          src="https://picsum.photos/500/500
+          src="https://images.adsttc.com/media/images/5de8/8330/3312/fd9f/fd00/01d3/large_jpg/08_Architect-Offices-Rivierstaete-Kantoren-Amsterdam-MVSA-%C2%A9Barwerd_van_der_Plas_W.jpg?1575519018
 " 
           alt="Interior Design"
-          className="w-full  shadow-lg"
+          className="w-full lg:h-[450px]  shadow-lg"
         />
       </div>
     </section>

@@ -25,7 +25,7 @@ const SidebarItem = ({ name, icon, onClick }) => {
 
 const DashboardContent = ({ section }) => {
   switch (section) {
-    case 'Home':
+    case 'Dashboard':
       return <div className=""><Home/></div>;
     case 'Blog':
       return <div className=""><BlogDashboard/></div>;
@@ -91,8 +91,8 @@ const Dashboard = () => {
     <div className="flex flex-col sm:flex-row ">
       {/* Sidebar */}
       <div className="bg-slate-900 max-h-[100vh] overflow-hidden text-white min-h-screen  sm:w-64 py-6 px-3">
-        <div className="text-2xl font-semibold mb-6 px-4">Dashboard</div>
-        <SidebarItem name="Home" icon={<House />} onClick={setSection} />
+        <div className="text-2xl font-semibold mb-6 px-4">Lancet Architect</div>
+        <SidebarItem name="Dashboard" icon={<House />} onClick={setSection} />
         <SidebarItem name="Inquiry Data" icon={<MailQuestion />} onClick={setSection} />
         <SidebarItem name="Blog" icon={<Rss />} onClick={setSection} />
         <SidebarItem name="Project" icon={<FolderOpenDot />} onClick={setSection} />

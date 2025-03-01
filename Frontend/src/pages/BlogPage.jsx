@@ -103,10 +103,10 @@ const BlogPage = () => {
                 <h3 className="font-semibold text-xl">{article.title}</h3>
                 
                 {/* Render HTML Description */}
-                <div
+                {/* <div
                   className="text-sm mt-1 line-clamp-3"
                   dangerouslySetInnerHTML={{ __html: article.description }}
-                />
+                /> */}
 
                 {/* Read More Button */}
                 <Link

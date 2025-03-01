@@ -54,9 +54,9 @@ const BlogDetail = () => {
             className="w-full h-[400px] object-cover shadow-md"
           />
           <p className="text-gray-500 text-sm mt-4">{formattedDate(blog.updatedAt)}</p>
-          <h1 className="lg:text-3xl text-xl font-semibold mt-2">{blog.title}</h1>
+          <h1 className="lg:text-2xl text-xl font-semibold mt-2">{blog.title}</h1>
           <div
-            className="mt-4 lg:text-lg text-gray-700 leading-relaxed"
+            className="mt-4 lg:text-lg text-gray-950 blog"
             dangerouslySetInnerHTML={{ __html: blog.description }}
           />
 
@@ -83,7 +83,7 @@ const BlogDetail = () => {
                   className="block p-4 bg-white border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   <img
-                    src={relatedBlog.image}
+                    src={relatedBlog.imageUrl}
                     alt={relatedBlog.title}
                     className="w-full h-40 object-cover"
                   />
