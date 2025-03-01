@@ -1,99 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Breadcrum from "../components/Breadcrum";
 import { X, ChevronLeft, ChevronRight, Plus } from "lucide-react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProjectData } from "../redux/slices/dataslice";
 
-const projects = [
-    {
-      title: "Longwater Avenue",
-      slug: "longwater-avenue",
-      description: "A modern architectural masterpiece with sustainable features.",
-      mainImageUrl: "https://picsum.photos/400/300?random=1",
-      otherImagesUrl: [
-        "https://picsum.photos/400/300?random=101",
-        "https://picsum.photos/400/300?random=102",
-        "https://picsum.photos/400/300?random=103",
-        "https://picsum.photos/400/300?random=104",
-      ],
-    },
-    {
-      title: "Skyline Heights",
-      slug: "skyline-heights",
-      description: "Luxury apartments with a breathtaking city view.",
-      mainImageUrl: "https://picsum.photos/400/300?random=4",
-      otherImagesUrl: [
-        "https://picsum.photos/400/300?random=105",
-        "https://picsum.photos/400/300?random=106",
-        "https://picsum.photos/400/300?random=107",
-        "https://picsum.photos/400/300?random=108",
-      ],
-    },
-    {
-      title: "Sunset Villa",
-      slug: "sunset-villa",
-      description: "A peaceful villa with stunning sunset views.",
-      mainImageUrl: "https://picsum.photos/400/300?random=7",
-      otherImagesUrl: [
-        "https://picsum.photos/400/300?random=109",
-        "https://picsum.photos/400/300?random=110",
-        "https://picsum.photos/400/300?random=111",
-        "https://picsum.photos/400/300?random=112",
-      ],
-    },
-    {
-      title: "Ocean Breeze",
-      slug: "ocean-breeze",
-      description: "A coastal retreat with breathtaking ocean views.",
-      mainImageUrl: "https://picsum.photos/400/300?random=10",
-      otherImagesUrl: [
-        "https://picsum.photos/400/300?random=113",
-        "https://picsum.photos/400/300?random=114",
-        "https://picsum.photos/400/300?random=115",
-        "https://picsum.photos/400/300?random=116",
-      ],
-    },
-    {
-      title: "Mountain Escape",
-      slug: "mountain-escape",
-      description: "A serene getaway in the heart of the mountains.",
-      mainImageUrl: "https://picsum.photos/400/300?random=13",
-      otherImagesUrl: [
-        "https://picsum.photos/400/300?random=117",
-        "https://picsum.photos/400/300?random=118",
-        "https://picsum.photos/400/300?random=119",
-        "https://picsum.photos/400/300?random=120",
-      ],
-    },
-    {
-      title: "Urban Oasis",
-      slug: "urban-oasis",
-      description: "A modern living space in the bustling city center.",
-      mainImageUrl: "https://picsum.photos/400/300?random=16",
-      otherImagesUrl: [
-        "https://picsum.photos/400/300?random=121",
-        "https://picsum.photos/400/300?random=122",
-        "https://picsum.photos/400/300?random=123",
-        "https://picsum.photos/400/300?random=124",
-      ],
-    },
-  ];
+
 
 const ProjectDetailPage = () => {
   const { slug } = useParams();
+  const dispatch = useDispatch();
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const project = projects.find((proj) => proj.slug === slug);
-  if (!project) {
-    return (
-      <div className="text-center py-20">
-        <h2 className="text-3xl font-bold text-red-500">Project Not Found!</h2>
-        <Link to="/projects" className="mt-4 inline-block text-primary underline">
-          Back to Projects
-        </Link>
-      </div>
-    );
-  }
+  const { projectData, status, error } = useSelector((state) => state.data);
+
+  useEffect(() => {
+    if (!projectData.length) dispatch(fetchProjectData());
+  }, [dispatch, projectData.length]);
+
+  const project = projectData.find((item) => item.slug === slug);
 
   const openModal = (index) => {
     setCurrentImageIndex(index);
@@ -103,12 +29,23 @@ const ProjectDetailPage = () => {
   const closeModal = () => setModalOpen(false);
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % project.otherImagesUrl.length);
+    setCurrentImageIndex((prev) => (prev + 1) % project.otherImages.length);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + project.otherImagesUrl.length) % project.otherImagesUrl.length);
+    setCurrentImageIndex((prev) => (prev - 1 + project.otherImages.length) % project.otherImages.length);
   };
+
+
+  if (status === "loading")
+    return <div className="text-gray-800 text-xl my-24  font-semibold text-center">Loading...</div>;
+
+  if (error)
+    return <div className="text-red-500 text-xl  my-24 font-semibold text-center">{error}</div>;
+
+  if (!project)
+    return <div className="text-red-500 text-xl my-24  font-semibold text-center">Project Not Found!</div>;
+
 
   return (
     <section>
@@ -133,7 +70,7 @@ const ProjectDetailPage = () => {
 
           <div>
             <div className="grid grid-cols-2 gap-4">
-              {project.otherImagesUrl.map((img, index) => (
+              {project.otherImages?.map((img, index) => (
                 <div key={index} className="relative cursor-pointer" onClick={() => openModal(index)}>
                   <img src={img} alt={`Project ${index}`} className="shadow-md" />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition">
@@ -157,7 +94,7 @@ const ProjectDetailPage = () => {
           <button onClick={prevImage} className="absolute left-5 text-white p-2">
             <ChevronLeft size={40} />
           </button>
-          <img src={project.otherImagesUrl[currentImageIndex]} alt="Gallery" className="max-w-3xl max-h-screen shadow-lg" />
+          <img src={project.otherImages[currentImageIndex]} alt="Gallery" className="max-w-3xl max-h-screen shadow-lg" />
           <button onClick={nextImage} className="absolute right-5 text-white p-2">
             <ChevronRight size={40} />
           </button>

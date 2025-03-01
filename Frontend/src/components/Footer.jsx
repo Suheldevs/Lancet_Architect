@@ -10,12 +10,15 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { Mails } from 'lucide-react';
+import { Mails } from "lucide-react";
 
 import { FaSquareXTwitter } from "react-icons/fa6";
 import cclogo from "../assets/Home/ccogo-suhel.webp";
 import pattern from "../assets/pattern/banner2.jpg";
 import logo from "../assets/logo.png";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchProjectData } from "../redux/slices/dataslice";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -23,6 +26,15 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+
+  const dispatch = useDispatch();
+  const { projectData, status, error } = useSelector((state) => state.data);
+  useEffect(() => {
+    if (!projectData.length) {
+      dispatch(fetchProjectData());
+    }
+  }, [dispatch, projectData.length]);
+
   return (
     <footer className="relative bg-black/95 text-white">
       <div
@@ -38,9 +50,9 @@ const Footer = () => {
       <div className="container mx-auto py-10 xl:px-12 px-4 lg:py-12 md:py-12 grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-2 lg:gap-4 gap-6">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
-          <a href="/">
+          <Link to="/"  onClick={scrollToTop}>
             <img src={logo} alt="Space Culture" className="h-16 mb-2" />
-          </a>
+          </Link>
           <p className="text-sm mb-2 tracking-wider">
             {" "}
             Architects, Interior, Landscape
@@ -69,18 +81,18 @@ const Footer = () => {
             <h3 className="text-xl font-semibold lg:mb-6 mb-2">Useful Links</h3>
             <ul className="space-y-2 text-base">
               {[
-                { id: "", label: "Home", width: "w-20" },
+                // { id: "", label: "Home", width: "w-20" },
                 { id: "about", label: "About Us", width: "w-32" },
-                { id: "projects", label: "Projects", width: "w-28" },
-                // { id: "gallery", label: "Gallery", width: "w-24" },
-                // { id: "testimonial", label: "Testimonial", width: "w-36" },
+                // { id: "projects", label: "Projects", width: "w-28" },
+                { id: "gallery", label: "Gallery", width: "w-24" },
+                { id: "testimonial", label: "Testimonial", width: "w-36" },
                 { id: "blogs", label: "Blog", width: "w-20" },
                 { id: "contact", label: "Contact Us", width: "w-32" },
-                { id: "admin", label: "Admin Login", width: "w-32" },
+                // { id: "https://lancet-admin.netlify.app/", label: "Admin Login", width: "w-32" },
               ].map((item, index) => (
                 <li key={index}>
                   <Link
-                  onClick={scrollToTop}
+                    onClick={scrollToTop}
                     to={`/${item.id}`}
                     className="group flex items-center space-x-2 transition transform hover:translate-x-2"
                   >
@@ -91,28 +103,31 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <a
+                href="https://lancet-admin.netlify.app/"
+                target="_blank"
+                className="group flex items-center space-x-2 transition transform hover:translate-x-2"
+              >
+                <MdKeyboardDoubleArrowRight className="text-xl text-gray-400 group-hover:text-red-600 transition-all" />
+                <span className="group-hover:text-gray-400 transition">
+                  Admin Login
+                </span>
+              </a>
             </ul>
           </div>
         </div>
         <div>
           <h3 className="text-xl font-semibold lg:mb-6 mb-2">Our Projects</h3>
           <ul className="space-y-2 text-base">
-            {[
-              "Commercial",
-              "Residential",
-              "City Planning",
-              "Interior Design",
-              "Project Analysis",
-              "Renovation",
-            ].map((item, index) => (
+            {projectData?.slice(0, 7).map((item, index) => (
               <li key={index}>
                 <Link
-                  to="#"
+                  to={`/projects/${item.slug}`}
                   className="group flex items-center space-x-2 transition transform hover:translate-x-2"
                 >
                   <MdKeyboardDoubleArrowRight className="text-xl text-gray-400 group-hover:text-red-600 transition-all" />
-                  <span className="group-hover:text-gray-400 transition">
-                    {item}
+                  <span className="group-hover:text-gray-400 transition line-clamp-1">
+                    {item.title}
                   </span>
                 </Link>
               </li>
@@ -151,7 +166,7 @@ const Footer = () => {
               href="mailto:info@lancetarchitect.com"
               className="flex items-center space-x-2 mt-2 group"
             >
-              <Mails  className="text-gray-400 group-hover:text-red-600" />{" "}
+              <Mails className="text-gray-400 group-hover:text-red-600" />{" "}
               <span className="group-hover:text-gray-400">
                 info@lancetarchitect.com
               </span>

@@ -18,7 +18,7 @@ const HeroSection = () => {
     <div className="relative w-full lg:h-screen h-[95vh] overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 bg-black/40 z-10"></div>
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -26,7 +26,7 @@ const HeroSection = () => {
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src={bgvideo} type="video/mp4" />
-      </video>
+      </video> */}
 
       {/* Overlay Text */}
       <div className="absolute z-30 left-5 lg:bottom-12 bottom-52 lg:left-1/2 transform lg:-translate-x-1/2 -translate-y-1/2 lg:text-center text-white">

@@ -27,6 +27,12 @@ const Header = () => {
     { id: "contact", label: "Contact Us", width: "w-32" },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
     <header
@@ -36,9 +42,9 @@ const Header = () => {
           : "bg-black/10 hover:bg-black/50 backdrop-blur-sm top-5 lg:max-w-[1200px] 2xl:max-w-[1400px] rounded-xl"
       }`}
     >
-      <a href="/" className="w-44">
+      <Link to="/" className="w-44"  onClick={scrollToTop}>
         <img src={logo}/>
-      </a>
+      </Link>
 
       <div className={`flex items-center space-x-3 text-white gap-4`}>
         <div className={`${isOpen ? "hidden" : "block"}`}>
@@ -89,6 +95,7 @@ const Header = () => {
 
             {menuItems.map(({ id, label, width }) => (
               <Link
+              onClick={scrollToTop}
                 key={id}
                 to={`/${id}`}
                 className={`btn ${width} px-6`}

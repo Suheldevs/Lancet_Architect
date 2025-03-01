@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Breadcrum from "../components/Breadcrum";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProjectData } from "../redux/slices/dataslice";
 
 const projects = [
   {
@@ -81,6 +83,17 @@ const projects = [
 
 
 const ProjectPage = () => {
+
+  const dispatch = useDispatch();
+  const { projectData, status, error } = useSelector((state) => state.data);
+  useEffect(() => {
+    if (!projectData.length) {
+      dispatch(fetchProjectData());
+    }
+  }, [dispatch, projectData.length]);
+
+
+
   return (
     <section>
       <Breadcrum
@@ -92,7 +105,23 @@ const ProjectPage = () => {
       />
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 container mx-auto lg:py-14 md:py-12 py-10 gap-6 px-4">
-        {projects.map((project, index) => (
+      {status === "loading" && (
+          <div className="text-gray-800 text-xl font-semibold text-center">
+            Loading...
+          </div>
+        )}
+        {error && (
+          <div className="text-red-500 text-xl font-semibold text-center">
+            {error}
+          </div>
+        )}
+        {!error && projectData.length === 0 && (
+          <div className="text-red-500 text-xl font-semibold text-center">
+            Project Data Not Found!
+          </div>
+        )}
+      
+        {projectData?.map((project, index) => (
           <div
             key={index}
             className="px-2">

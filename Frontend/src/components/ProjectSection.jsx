@@ -1,51 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import pattern from "../assets/pattern/element1.jpg";
+import { fetchProjectData } from "../redux/slices/dataslice";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProjectSection = () => {
-  const projects = [
-    {
-      title: "Longwater Avenue Longwater",
-      slug: "longwater-avenue",
-      description:
-        "A modern architectural masterpiece with sustainable features.",
-      mainImage: "https://picsum.photos/400/300?random=1",
-    },
-    {
-      title: "Skyline Heights",
-      slug: "skyline-heights",
-      description: "Luxury apartments with a breathtaking city view.",
-      mainImage: "https://picsum.photos/400/300?random=4",
-    },
-    {
-      title: "Sunset Villa",
-      slug: "sunset-villa",
-      description: "A peaceful villa with stunning sunset views.",
-      mainImage: "https://picsum.photos/400/300?random=7",
-    },
-    {
-      title: "Ocean Breeze",
-      slug: "ocean-breeze",
-      description: "A coastal retreat with breathtaking ocean views.",
-      mainImage: "https://picsum.photos/400/300?random=10",
-    },
-    {
-      title: "Mountain Escape",
-      slug: "mountain-escape",
-      description: "A serene getaway in the heart of the mountains.",
-      mainImage: "https://picsum.photos/400/300?random=13",
-    },
-    {
-      title: "Urban Oasis",
-      slug: "urban-oasis",
-      description: "A modern living space in the bustling city center.",
-      mainImage: "https://picsum.photos/400/300?random=16",
-    },
-  ];
+ 
+  const dispatch = useDispatch();
+  const { projectData, status, error } = useSelector((state) => state.data);
+  useEffect(() => {
+    if (!projectData.length) {
+      dispatch(fetchProjectData());
+    }
+  }, [dispatch, projectData.length]);
+
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -96,7 +70,7 @@ const ProjectSection = () => {
           </h2>
         </div>
         <Slider {...settings} className="">
-          {projects.map((project, index) => (
+          {projectData?.map((project, index) => (
             <div
               key={index}
               className="px-2"
@@ -106,7 +80,7 @@ const ProjectSection = () => {
               <div className="relative group overflow-hidden block">
                 {/* Image with zoom effect */}
                 <img
-                  src={project.mainImage}
+                  src={project.mainImageUrl}
                   alt={project.title}
                   className="w-full h-96 object-cover transition-transform duration-300 "
                 />
