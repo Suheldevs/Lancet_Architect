@@ -6,7 +6,6 @@ import Home from '../components/Home';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import InquiryDashboard from '../components/InqueryDashboard';
-import TreatmentDashboard from '../components/TreatmentDashboard';
 import GalleryDashboard from '../components/GalleryDashboard';
 
 

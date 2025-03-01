@@ -12,11 +12,11 @@ function Testimonial() {
         Take a look what our client says
         </h2>
 </div>
-      <div className="md:px-10 px-4 ">
+      <div className="md:px-8 px-4 lg:mt-4">
         <iframe
           src="https://widget.tagembed.com/2156631"
-          className="w-full h-96"
-          title="Xpress Tour & Travels Reviews"
+          className="w-full lg:h-[30vh] overflow-y-auto"
+          title="lancet reviews"
         ></iframe>
       </div>
     </div>

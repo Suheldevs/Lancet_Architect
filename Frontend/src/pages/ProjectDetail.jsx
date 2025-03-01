@@ -50,7 +50,7 @@ const ProjectDetailPage = () => {
   return (
     <section>
       <Breadcrum
-        title={project.title}
+        title='Project Details'
         items={[
           { label: "Home", link: "/" },
           { label: "Projects", link: "/projects" },

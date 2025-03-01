@@ -38,8 +38,8 @@ const ProjectModal = ({ projectData, onClose }) => {
 
     const uploadData = new FormData();
     uploadData.append("file", file);
-    uploadData.append("upload_preset", "dr_shashikant");
-    uploadData.append("folder", "dr_shashikant/project");
+    uploadData.append("upload_preset", "lancet");
+    uploadData.append("folder", "lancet/project");
 
     try {
       const response = await axios.post(

@@ -21,7 +21,6 @@ const Home = () => {
       const blogResponse = await axios.get(
         `${import.meta.env.VITE_API_URL}/blog/getall`
       );
-      console.log(blogResponse)
       setBlogCount(blogResponse.data.length);
 
       // Fetch total cases

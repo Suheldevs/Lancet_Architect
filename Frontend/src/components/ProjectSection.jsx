@@ -69,6 +69,21 @@ const ProjectSection = () => {
             Take a tour of our work
           </h2>
         </div>
+        {status === "loading" && (
+          <div className="text-gray-800 text-xl font-semibold text-center">
+            Loading...
+          </div>
+        )}
+        {error && (
+          <div className="text-red-500 text-xl font-semibold text-center">
+            {error}
+          </div>
+        )}
+        {!error && projectData.length === 0 && (
+          <div className="text-red-500 text-xl font-semibold text-center">
+            Project Data Not Found!
+          </div>
+        )}
         <Slider {...settings} className="">
           {projectData?.map((project, index) => (
             <div
